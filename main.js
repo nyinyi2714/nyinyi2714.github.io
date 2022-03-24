@@ -66,12 +66,15 @@ meterbars.forEach(bar => meterbarObserver.observe(bar));
 
 
 //Animating the page loading
+document.querySelector('.logo_path').classList.add('draw');
+document.querySelector('.logo').classList.add('place');
 const timeline = gsap.timeline({defaults: {duration: .4} });
-timeline.fromTo('.logo', {opacity: 0, y: '-100%'}, {duration: .5, opacity: 1, y: 0})
-timeline.fromTo('.desktop_nav > *', {opacity: 0, y: '-100%'}, {opacity: 1, y: 0, stagger: .1})
-timeline.fromTo('.burger_menu', {opacity: 0, y: '-100%'}, {opacity: 1, y: 0}, '<')
-timeline.fromTo('.hero > *', {opacity: 0, y: '40%'}, {opacity: 1, y: 0, stagger: .1})
-timeline.fromTo('.side_content', {opacity: 0}, {opacity: 1,})
+timeline
+    .fromTo('.logo a', {opacity: 0}, {opacity: 1}, .4)
+    .fromTo('.desktop_nav > *', {opacity: 0, y: '-100%'}, {delay: 1, opacity: 1, y: 0, stagger: .1})
+    .fromTo('.burger_menu', {opacity: 0, y: '-100%'}, {opacity: 1, y: 0}, '<')
+    .fromTo('.hero > *', {opacity: 0, y: '40%'}, {opacity: 1, y: 0, stagger: .1})
+    .fromTo('.side_content', {opacity: 0}, {opacity: 1,})
 
 
 
@@ -89,36 +92,25 @@ burgerMenu.addEventListener('click', () => {
 
 mobileNavItems.forEach(item => item.addEventListener('click', closeMobileNav))
 
+const burgerMenuTimeline = gsap.timeline({defaults: {duration: .1, ease: Power1.easeOut}, paused: true });
+burgerMenuTimeline
+.to(barArr[0], {duration: .05, y:'10px'}, 'combine')
+.to(barArr[2], {duration: .05, y:'-10px'}, 'combine')
+.to(barArr[2], {opacity: '0'})
+.to(barArr[1], {duration: 0, width: '40px'})
+.to(barArr[1], {rotation: '45'}, 'rotate')
+.to(barArr[0], {rotation: '135'}, 'rotate')
+.to(extendedMenu, {duration: .05, x:0}, '<');
+
 function openMobileNav() {
-    burgerMenuAnimation.open();
+    burgerMenuTimeline.play();
     burgerMenu.dataset.close = 'false';
     main.classList.add('blur');
 }
 
 function closeMobileNav() {
-    burgerMenuAnimation.close();
+    burgerMenuTimeline.reverse();
     burgerMenu.dataset.close = 'true';
     main.classList.remove('blur');
 }
 
-const burgerMenuAnimation = {
-    tl: gsap.timeline({defaults: {duration: .1} }),
-    firstTime: true,
-    open() {
-        if(this.firstTime) {
-            this.tl.to(barArr[0], {y:'10px'})
-            this.tl.to(barArr[2], {y:'-10px'}, '<')
-            this.tl.to(barArr[2], {opacity: '0'})
-            this.tl.to(barArr[1], {width: '40px'}, '<')
-            this.tl.to(barArr[1], {rotation: '45'})
-            this.tl.to(barArr[0], {rotation: '135'}, '<')
-            this.tl.to(extendedMenu, {duration: .05, x:0} , '<')
-            this.firstTime = false;
-        } else {
-            this.tl.play();
-        } 
-    },
-    close() {
-        this.tl.reverse();
-    }
-}
