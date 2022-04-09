@@ -4,176 +4,222 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyi Nyi Moe Htet</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="main.js" defer></script>
+    <title>Event</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            max-width: 100%;
+        }
+        .img-link {
+            display: inline-block;
+            height: 0;
+        }
+        table {
+            border: 0;
+            border-spacing: 0;
+        }
+        td {
+            padding: 0;
+        }
+        .full-width {
+            width: 100%;
+            background-color: #eeeeee;
+            padding-top: 15px;
+        }
+        .table {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #818181;
+            text-align: center;
+            line-height: 1.5;
+            padding: 0 40px;
+        }
+        .main {
+            background-color: white;
+            padding: 0 40px 48px;
+            color: #404145;
+        }
+        .btn {
+            color: white;
+            background-color: #1dbf73;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .link {
+            text-decoration: underline; 
+            color: #1dbf73
+        }
+        .order-list {
+            padding-left: 40px; 
+            margin: 12px 0;
+        }
+        .order-list li {
+            padding: 2px 5px;
+        }
+        .social-link img {
+            margin: 0 8px;
+            max-width: 30px;
+        }
+        .support-link {
+            color: #126f43;
+            font-weight: bold;
+        }
+        @media (max-width: 450px) {
+            .table {
+                padding: 0 20px;
+            }
+            .main {
+                padding: 0 20px 48px;
+            }
+            .order-list {
+                padding-left: 20px;
+            }
+            .social-link img {
+            margin: 0 5px;
+        }
+
+        }
+
+    </style>
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <a href="#">NN</a>
-            <svg height="50" width="55" class="logo_wrapper">
-                <path class="logo_path" fill="none" d="M12.5 0 L37.5 0 L50 20 L37.5 40 L12.5 40 L0 20 L13.5 0 Z" />
-            </svg>
-        </div>
-        <ul class="mobile_nav">
-            <div class="burger_menu" data-close="true">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="extended_menu_background"></div>
-            <div class="extended_menu">
-                <a href="#about" class="mobile_nav_item">About</a>
-                <a href="#experience" class="mobile_nav_item">Experience</a>
-                <a href="#projects" class="mobile_nav_item">Projects</a>
-                <a href="#contact" class="mobile_nav_item">Contact</a>
-                <a href="#" class="btn">My Resume</a>
-            </div>
-        </ul>
-        <ul class="desktop_nav">
-            <li><a href="#about" class="desktop_nav_item" name="about">About</a></li>
-            <li><a href="#experience" class="desktop_nav_item" name="experience">Experience</a></li>
-            <li><a href="#projects" class="desktop_nav_item" name="projects">Projects</a></li>
-            <li><a href="#contact" class="desktop_nav_item" name="contact">Contact</a></li>
-        </ul>
-    </nav>
+    <table class="full-width">
+        <tr>
+            <td>
+                <!-- White background Section -->
+                <table class="table main">
+                    <tr>
+                        <td align="left" style="padding-top: 10px">
+                            <!-- Fiverr Logo -->
+                            <a href="#" class="img-link"><img src="./Fiverr Img/logo.jpg" alt="Fiverr Logo" width="150"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Discount Image -->
+                            <a href="#" class="img-link"><img src="./Fiverr Img/discount.jpg" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Header -->
+                            <p style="font-size: 40px; padding: 15px 0">
+                                <b>Do</b> 
+                                <i style="color: #ff80ae">more.</i>
+                                <b>Spend Less.</b>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Paragraph -->
+                            <p style="padding-bottom: 32px;">
+                                First steps are big steps on Fiverr. Wondering how much 20% off can save you? Come and find out… (within the next 48 hours)
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Discount Code -->
+                            <b style="padding-bottom: 20px;">
+                                Get 20% off your first order when you use code 20START at checkout.
+                            </b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 30px 0">
+                            <!-- CTA Button -->
+                            <a href="#" class="btn"><b>Start Doing</b></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- More Info -->
+                            <p style="padding-bottom: 5px">Valid only for your first order.</p>
+                            <p>To learn more read <a href="#" class="link">here</a></p>
+                        </td>
+                    </tr>
+                </table>
 
-    <main>
-        <section class="section hero" id="hero">
-            <h1>Hi, my name is </h1>
-            <h2>Nyi Nyi Moe Htet</h2>
-            <h3>Junior Frontend Developer</h3>
-            <p>I like building responsive websites.</p>
-            <a href="#" class="btn">My Resume</a>
-        </section>
-        <section class="section about slide-in" id="about">
-            <h2 class="sec_heading">About Me</h2>
-            <div class="profile_container">
-                <div class="profile_img"><img src="/Images/3.jpg" alt="profile photo" class="img"></div>
-                <div class="profile">
-                    <p>Hello! My name is Nyi Nyi Moe Htet and I'm a junior at Califonia State University, Northridge. My major is Computer Science.</p>
-                    <h3>My skills</h3>
-                    <div class="skills">
-                        <li class="skill_name">HTML</li>
-                        <div class="meter">
-                            <div class="meterbar bar1"></div>
-                        </div>
-                        <span class="percent">80%</span>
-                        <li class="skill_name">CSS</li>
-                        <div class="meter">
-                            <div class="meterbar bar2"></div>
-                        </div>
-                        <span class="percent">80%</span>
-                        <li class="skill_name">JavaScript</li>
-                        <div class="meter">
-                            <div class="meterbar bar3"></div>
-                        </div>
-                        <span class="percent">65%</span>
-                        <li class="skill_name">Jquery</li>
-                        <div class="meter">
-                            <div class="meterbar bar4"></div>
-                        </div>
-                        <span class="percent">75%</span>
-                        <li class="skill_name">React</li>
-                        <div class="meter">
-                            <div class="meterbar bar5"></div>
-                        </div>
-                        <span class="percent">50%</span>
-                        <li class="skill_name">Sass</li>
-                        <div class="meter">
-                            <div class="meterbar bar6"></div>
-                        </div>
-                        <span class="percent">75%</span>                        
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section experience slide-in" id="experience">
-            <h2 class="sec_heading">My Experience</h2>
+                <!-- Terms and Conditions -->
+                <table class="table"  style="padding-top: 48px;">
+                    <tr>
+                        <td align="left">
+                            <p>Terms & Conditions:</p> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Order List -->
+                        <td align="left">
+                            <ol class="order-list">
+                                <li>All <a href="#" class="link">Fiverr's Terms of Service</a> apply.</li>
+                                <li>The promo code is valid only for your first purchase on Fiverr and can be used until end of day 08.12.2022, 11:59pm GMT.</li>
+                                <li>To receive your discount, simply enter your promo code in the checkout page.</li>
+                                <li>Promo codes are limited to 1 use per user.</li>
+                                <li>Promo codes may not be used or combined with any other promotion.</li>
+                                <li>For orders that are comprised of one or more milestones, the promo code will apply to the first milestone only. Promo Codes do not apply to Fiverr Credits.</li>
+                                <li>This promotion is subject to availability and may be withdrawn or amended without notice at any time at Fiverr’s sole discretion.</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Customer Service -->
+                        <td align="left">
+                            <p style="padding-bottom: 15px">For any technical issues faced, please contact <a href="#" class="link">Customer Support.</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Social Links -->
+                        <td class="social-link" style="padding-bottom: 20px;">
+                            <a href="#" class="img-link"><img src="./Fiverr Img/twitter.jpg" alt=""></a>
+                            <a href="#" class="img-link"><img src="./Fiverr Img/facebook.jpg" alt=""></a>
+                            <a href="#" class="img-link"><img src="./Fiverr Img/Pintrest.jpg" alt=""></a>
+                            <a href="#" class="img-link"><img src="./Fiverr Img/Linkedin.jpg" alt=""></a>
+                            <a href="#" class="img-link"><img src="./Fiverr Img/Instagram.jpg" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Support Links -->
+                        <td style="padding-bottom: 20px;">
+                            <a href="#" class="support-link img-link"> Privacy Policy</a> |  
+                            <a href="#" class="support-link img-link"> Support</a> | 
+                            <a href="#" class="support-link img-link"> Invite a Friend</a> | 
+                            <a href="#" class="support-link img-link"> Get Inspired</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Sender Info -->
+                        <td>
+                            <p style="padding-bottom: 20px;">
+                                This email was sent to you by Fiverr International Ltd.
+                                You are receiving this email because you signed up for Fiverr.
+                                If you wish to unsubscribe from all future emails, please click <a href="#" style="color: #126f43">here</a>.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Sender Address -->
+                        <td>
+                            <p style="padding-bottom: 20px">Fiverr International Ltd. | 38 Greene St. | New York, NY 10013, USA</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Download Links -->
+                        <td style="padding-bottom: 60px;">
+                            <!-- <a href="#" class="img-link"><img src="./Fiverr Img/appstore.jpg" style="max-width: 300px;" alt="appstore link"></a> -->
+                        </td>
+                    </tr>
+                </table>
 
-        </section>
-        <section class="section projects" id="projects">
-            <h2 class="sec_heading slide-in">Personal Projects</h2>
-            <div class="projects_container">
-                <div class="project_item slide-in">
-                    <h3>Social Media Website</h3>
-                    <a href="#" class="external_link"><img src="/Images/4.jpg" alt="" class="preview"></a>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>
-                    <ul class="tech">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-                <div class="project_item slide-in">
-                    <h3>Movies Website</h3>
-                    <a href="#" class="external_link"><img src="/Images/5.jpg" alt="" class="preview"></a>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>
-                    <ul class="tech">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-                <div class="project_item slide-in">
-                    <h3>E-commerce Website</h3>
-                    <a href="#" class="external_link"><img src="/Images/6.jpg" alt="" class="preview"></a>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>
-                    <ul class="tech">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-                <div class="project_item slide-in">
-                    <h3>Chating Room Website</h3>
-                    <a href="#" class="external_link"><img src="/Images/7.jpg" alt="" class="preview"></a>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>                    
-                    <ul class="tech">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="section contact slide-in" id="contact">
-            <h2 class="sec_heading">Contact Me</h2>
-            <form action="" class="contact_form">
-                <label for="name"><input type="text" id="name" placeholder="Name" required></label>
-                <label for="email"><input type="email" id="email" placeholder="Email" required></label>
-                <label for="message" class="message"><textarea name="message" id="message" placeholder="Type your message" required></textarea></label>
-                <button class="btn submit slide-in">Send Message</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <div class="mobile_footer social">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href=""><i class="fa-brands fa-codepen"></i></a>
-        </div>
-        <p>Created by Nyi Nyi Moe Htet</p>
-        <p>Email: nyinyi2714@gmail.com</p>
-    </footer>
-    <div class="side_content side_content_left social">
-        <a href=""><i class="fa-brands fa-facebook"></i></a>
-        <a href=""><i class="fa-brands fa-twitter"></i></a>
-        <a href=""><i class="fa-brands fa-instagram"></i></a>
-        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href=""><i class="fa-brands fa-codepen"></i></a>
-    </div>
-    <div class="side_content side_content_right">
-        nyinyi2714@gmail.com
-    </div>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
