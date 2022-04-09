@@ -312,8 +312,8 @@ main {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 8%;
-  left: 8%;
+  top: 5%;
+  left: 5%;
   border: 2px solid var(--green);
   border-radius: 5px;
   z-index: -1;
@@ -580,7 +580,7 @@ img {
 }
 
 /* Mobile Version Breakpoint */
-@media (max-width: 820px) {
+@media (max-width: 840px) {
 
   /* Change logo scale and transition speed */
   .logo {
@@ -675,7 +675,7 @@ img {
   /* line after section heading will be shortened */
   .sec_heading::after {
     left: calc(100% + 10px);
-    width: calc(60vw - 200px);
+    width: 25vw;
   }
 
   /* removing sections padding */
@@ -695,6 +695,11 @@ img {
 
 
 @media (max-width: 400px) {
+
+  /* Hide Section heading */
+  .sec_heading::after {
+    display: none;
+  }
 
   /* Change logo scale and transition speed */
   .logo {
