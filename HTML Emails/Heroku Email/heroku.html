@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Heroku! Get more from the platform.</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            display: inline-block;
+            height: 0;
+            text-decoration: none;
+        }
+        img {
+            max-width: 100%;
+            border: 0;
+        }
+        table {
+            border: 0;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        center {
+            width: 100%;
+            padding: 50px 0 20px;
+            background-color: #473A8F;
+            line-height: 1.5;
+        }
+        .main {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            border-radius: 5px;
+
+            margin: 0 auto;
+            color: #3f3f44;
+            background-color: white;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+        }
+        .color, .heading, .subheading {
+            color: #79589f;
+        }
+        .heading {
+            font-size: 26px;
+        }
+        .subheading {
+            font-size: 20px;
+        }
+        .line {
+            width: 100%;
+            height: 1px;
+            background-color: lightgray;
+        }
+        .btn {
+            display: block;
+            height: auto;
+            color: white;
+            background-color: #408fec;
+            padding: 10px 0;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .instructions {
+            display: block;
+            text-align: left;
+        }
+        .img-container {
+            padding-right: 17.5px;
+            padding-top: 10px;
+            vertical-align: top;
+        }
+        .column {
+            display: inline-block;
+            width: 100%;
+            vertical-align: top;
+        }
+        .two-columns .column {
+            padding: 0px 17.5px;
+            max-width: 280px;
+        }
+        .three-columns .column {
+            padding-top: 20px;
+            max-width: 218px;
+        }
+        .footer {
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            background-color: #473A8F;
+            color: #8a7ecb;
+        }
+        .social-icons img {
+            margin: 2px;
+            max-width: 16px;
+        }
+
+        .instructions img {
+            max-width: 35px;
+        }
+        .padding {
+            padding: 0 17.5px;
+        }
+
+        @media screen and (min-width: 400px) {
+            .instructions img {
+                max-width: 50px;
+            }
+            .padding {
+                padding: 0 35px;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <center>
+        <table class="main">
+
+            <!-- Logo -->
+            <tr>
+                <td>
+                    <a href="#"><img src="https://i.ibb.co/kmTLBpx/Logo.png" alt="Logo"></a>
+                </td>
+            </tr>
+
+            <!-- Welcome -->
+            <tr>
+                <td class='padding' style="padding-top: 35px; padding-bottom: 35px; text-align: left;">
+                    <p>
+                        <b>Hello John,</b>
+                    </p>
+                    <p style="padding-top: 15px">
+                        Welcome to Heroku! Now you and your team can build and run apps on one integrated platform that combines compute, data, and workflow with a high-productivity developer experience.
+                    </p>
+                </td>
+            </tr>
+
+            <!-- Line -->
+            <tr>
+                <td class="line"></td>
+            </tr>
+
+            <!-- First Section -->
+            <tr>
+                <td class="padding" style="padding-top: 35px; padding-bottom: 35px;">
+                    <p class="heading">Stay productive on Heroku</p>
+                    <p style="text-align: left; padding-top: 20px">
+                        Get started by deploying an app to Heroku and taking these simple steps to help you and your team rapidly deliver apps for your business.
+                    </p>
+                </td>
+            </tr>
+
+            <!-- Instructions -->
+            <tr>
+                <td>
+                    <table class="instructions padding">
+
+                        <!-- First Row -->
+                        <tr>
+                            <td class="img-container">
+                                <img src="https://i.ibb.co/Wyc0tJP/flow.png" alt="flow">
+                            </td>
+                            <td>
+                                <p class="subheading">Set up your CI/CD workflow</p>
+                                <p style="padding: 5px 0 40px">
+                                    Deploy apps using Heroku's easy-to-use, structured workflow for continuous delivery, including Heroku Pipelines, Heroku CI,* review apps, and GitHub integration.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Second Row -->
+                        <tr>
+                            <td class="img-container">
+                                <img src="https://i.ibb.co/0ZRjhV6/heroku-team.png" alt="heroku-team">
+                            </td>
+                            <td>
+                                <p class="subheading">Create or join a Heroku Team</p>
+                                <p style="padding: 5px 0 40px">
+                                    Unify collaboration, administration, and billing with fine-grained control for all your apps with Heroku Teams.*
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Third Row -->
+                        <tr>
+                            <td class="img-container">
+                                <img src="https://i.ibb.co/DCW99Vz/data.png" alt="data">
+                            </td>
+                            <td>
+                                <p class="subheading">Integrate data</p>
+                                <p style="padding: 5px 0 40px">
+                                    Build data-driven apps more easily with managed services from Heroku and other ecosystem partners that are based on popular open source technologies, including PostgreSQL, Apache Kafka, Redis, and more.
+                                </p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </td>
+            </tr>
+
+            <!-- Line -->
+            <tr>
+                <td class="line"></td>
+            </tr>
+
+            <!-- Last Section -->
+            <tr>
+                <td style="padding: 35px 17.5px 0px">
+
+                    <table>
+
+                        <tr>
+                            <td>
+                                <p class="heading" style="padding:0px 17.5px 25px">Find more tips and inspiration</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="two-columns" width="100%">
+
+                                <table class="column" style="padding-bottom: 35px;">
+                                    <tr>
+                                        <td style="padding-bottom: 20px">
+                                            <a href="#"><img src="https://i.ibb.co/bWRLXrH/customer.png" alt="customer"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                Learn how Heroku helped Goodshuffle and other companies quickly launch and scale their business.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column" style="padding-bottom: 35px;">
+                                    <tr>
+                                        <td style="padding-bottom: 20px">
+                                            <a href="#"><img src="https://i.ibb.co/1sk0R6B/video-player.png" alt="video-player"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                Watch this Heroku Showcase tutorial to learn how to deploy your apps to Heroku, or view all Heroku videos.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </td>
+            </tr>
+
+            <!-- CTA Button -->
+            <tr>
+                <td style="padding: 0 35px 35px"><a href="#" class="btn">Get Started on Heroku</a></td>
+            </tr>
+
+        </table>
+
+        <!-- Footer -->
+
+        <table class="footer">
+            <tr>
+                <td class="three-columns" style="padding: 20px 20px 0;">
+
+                    <table class="column" style="padding-right: 15px">
+                        <tr>
+                            <td>
+                                <a href="#"><img src="https://i.ibb.co/5GsrNS2/saleforce.png" alt="saleforce"></a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="column">
+                        <tr>
+                            <td>
+                                <p style="padding: 0 15px;">
+                                    Salesforce
+                                    415 Mission Street, 3rd Floor
+                                    San Francisco, CA 94105
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="column" style="max-width: 115px">
+                        <tr>
+                            <td class="social-icons">
+                                <a href="#"><img src="https://i.ibb.co/ZGHmPLy/blog.png" alt="blog"></a>
+                                <a href="#"><img src="https://i.ibb.co/CBtLSsN/microphone.png" alt="microphone"></a>
+                                <a href="#"><img src="https://i.ibb.co/9gPqYtD/twitter.png" alt="twitter"></a>
+                                <a href="#"><img src="https://i.ibb.co/rcZL7v9/instagram.png" alt="instagram"></a>
+                                <a href="#"><img src="https://i.ibb.co/sskWcH6/youtube.png" alt="youtube"></a>
+                                <a href="#"><img src="https://i.ibb.co/Sdgp4Bd/facebook.png" alt="facebook"></a>
+                                <a href="#"><img src="https://i.ibb.co/KqHQ3Wm/heroku-on-github.png" alt="heroku-on-github"></a>
+                                <a href="#"><img src="https://i.ibb.co/RCX3kVM/linkedin.png" alt="linkedin"></a>
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+
+
+    </center>
+</body>
+</html>
+
+
+
