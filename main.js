@@ -115,7 +115,9 @@ function closeMobileNav() {
 // Handle the project filter 
 const bubbles = document.querySelectorAll('.bubble')
 const projectItems = document.querySelectorAll('.project_item')
+const projectsContainer = document.querySelector('.projects_container')
 let filter = []
+let removedItems = []
 
 bubbles.forEach(bubble => {
     bubble.addEventListener('click', e => {
@@ -152,6 +154,7 @@ bubbles.forEach(bubble => {
                 item.classList.remove('hide')
             } else {
                 item.classList.add('hide')
+                item.classList.add('show')
             }
         })
 
