@@ -4,13 +4,13 @@
   box-sizing: border-box;
   list-style: none;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -104,7 +104,7 @@ main.blur {
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 
   height: 80px;
@@ -127,40 +127,29 @@ nav.box_shadow {
 }
 
 .logo {
+  position: relative;
   color: var(--green);
-  padding: 15px;
-  position: fixed;
-  z-index: 4;
-  top: calc(50% - 25px);
-  left: calc(50% - 30px);
-  transition: 500ms ease-out;
-  transition-delay: 1.2s;
-  transform: scale(2);
 }
 
-.logo.place {
-  top: 15px;
-  left: 40px;
-  transform: scale(1);
+.name {
+  position: absolute;
+  top: 29%;
+  left: 28%;
 }
 
 .logo_wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
+  overflow: hidden;
 }
 
-.logo_path {
+.logo_path, .logo_cover {
   transform: translate(1.5px, 4.2px);
   stroke-width: 3px;
   stroke: var(--green);
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  transition: 10s ease-out;
 }
 
-.logo_path.draw {
-  stroke-dashoffset: 0;
+.logo_cover {
+  transform-origin: 45% 45%;
+  fill: var(--green);
 }
 
 .desktop_nav {
@@ -305,25 +294,11 @@ main {
   display: block;
   width: max(200px, 20vw);
   height: max(200px, 20vw);
-}
-
-.profile_img::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 5%;
-  left: 5%;
-  border: 2px solid var(--green);
   border-radius: 5px;
-  z-index: -1;
-  transition: 200ms;
+  justify-self: center;
+  box-shadow: 10px 10px 5px var(--navy-shadow);
 }
 
-.profile_img:hover::after {
-  top: 5%;
-  left: 5%;
-}
 
 .profile h3 {
   font-size: 1.2rem;
@@ -373,57 +348,150 @@ main {
   width: 75%;
 }
 
-
 .projects_container {
   padding: 0 clamp(10px, 3vw, 47px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  color: var(--green);
+  font-size: .9rem;
+  margin-bottom: 2rem;
+}
+
+.bubble {
+  text-align: center;
+  padding: .7rem;
+  border: 1px solid var(--green);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 100ms ease-in-out;
+}
+.bubble:hover {
+  text-shadow: 0 0 5px;
+}
+.selected {
+  box-shadow: 0 0 5px;
 }
 
 .projects h3 {
-  color: var(--lightest-slate);
   font-size: 1.7rem;
   font-weight: 500;
   margin: clamp(1rem, 2vw, 2rem) 0;
-}
-
-.project_item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  position: relative;
-  margin: 9rem 0;
-}
-
-.project_item:first-child {
-  margin-top: 5rem;
-}
-
-.project_item:last-child {
-  margin-bottom: 0rem;
-}
-
-.preview {
-  position: absolute;
-  width: 32vw;
-  height: clamp(150px, 28vw, 300px);
-  top: 10%;
-  left: 0;
-  border-radius: 10px;
-  box-shadow: 2px 2px var(--navy-shadow);
-  transition: box-shadow 200ms;
-}
-
-.preview:hover {
-  box-shadow: 15px 15px var(--navy-shadow);
-  border-radius: 10px;
+  transition: 200ms ease-in-out;
+  color: transparent;
 }
 
 .description {
-  padding: 1.5rem 1rem;
-  background-color: var(--light-navy);
+  text-align: left;
+  padding: 0;
+  background-color: transparent;
+  width: 100%;
+  margin: 2rem 0;
+}
+.project_item {
+  align-items: flex-start;
+  padding: 1rem clamp(.5rem, 3vw, 1.5rem);
+  max-width: 300px;
+  height: 100%  ;
+  transition: 200ms ease-in-out;
+  color: transparent;
+  cursor: pointer;
+
+  background-position: center;
+  background-size: cover;
   border-radius: 5px;
-  width: 40vw;
-  z-index: 1;
-  text-align: right;
+  background-blend-mode: darken;
+}
+
+.project_item:hover {
+  color: var(--lightest-slate);
+  transform: scale(1.03);
+}
+
+.project_item:hover h3 {
+  color: var(--lightest-slate);
+}
+
+.item1 {
+  background: url(Images/2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item1:hover {
+  background: rgba(0,0,0, .7) url(Images/2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.item2 {
+  background: url(Images/3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.item2:hover {
+  background: rgba(0,0,0, .7) url(Images/3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.item3 {
+  background: url(Images/4.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.item3:hover {
+  background: rgba(0,0,0, .7) url(Images/4.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.item4 {
+  background: url(Images/5.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.item4:hover {
+  background: rgba(0,0,0, .7) url(Images/5.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item5 {
+  background: url(/HTML-Emails/Heroku-Email/screenshot.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.item5:hover {
+  background: rgba(0,0,0, .7) url(/HTML-Emails/Heroku-Email/screenshot.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item6 {
+  background: url(/HTML-Emails/ProWritingAid/screenshot.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.item6:hover {
+  background: rgba(0,0,0, .7) url(/HTML-Emails/ProWritingAid/screenshot.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item7 {
+  background: url(/HTML-Emails/Heroku-Email/screenshot.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.item7:hover {
+  background: rgba(0,0,0, .7) url(/HTML-Emails/Heroku-Email/screenshot.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .tech {
@@ -471,21 +539,6 @@ main {
 .submit {
   grid-column: 1 / span 2;
   margin: 0 auto;
-}
-
-.message_sent {
-  width: 100%;
-  position: fixed;
-  top: 80px;
-  opacity: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background-color: var(--light-green);
-  color: var(--dark-navy);
-  z-index: 4;
-  text-align: center;
-  transition: 400ms ease-out;
 }
 
 ::placeholder {
@@ -582,10 +635,14 @@ img {
 /* Mobile Version Breakpoint */
 @media (max-width: 840px) {
 
-  /* Change logo scale and transition speed */
-  .logo {
-    transform: scale(1.7);
-    transition-duration: 400ms;
+  /* Reduce Bubble Filter Gap */
+  .filter {
+    gap: 1rem;
+    font-size: .75rem;
+  }
+
+  .bubble {
+    padding: .5rem;
   }
 
   /* change to mobile nav */
@@ -597,9 +654,6 @@ img {
   }
 
   /* change the layout of the project items */
-  .preview {
-    display: none;
-  }
   .description {
     text-align: left;
     padding: 0;
@@ -608,35 +662,48 @@ img {
     margin: 2rem 0;
   }
   .project_item {
-    align-items: flex-start;
-    margin: 2rem 0 !important;
-    padding: 4rem clamp(.5rem, 3vw, 1.5rem);
     color: var(--lightest-slate);
   }
-  .project_item:nth-of-type(1) {
-    background: url(Images/2.jpg);
+  .projects h3 {
+    color: var(--lightest-slate);
+  }
+  .item1 {
+    background: rgba(0,0,0, .7) url(Images/2.jpg);
     background-position: center;
     background-size: cover;
-    border-radius: 5px;
   }
-  .project_item:nth-of-type(2) {
-    background: url(Images/3.jpg);
+  .item2 {
+    background: rgba(0,0,0, .7) url(Images/3.jpg);
     background-position: center;
     background-size: cover;
-    border-radius: 5px;
   }
-  .project_item:nth-of-type(3) {
-    background: url(Images/4.jpg);
+  .item3 {
+    background: rgba(0,0,0, .7) url(Images/4.jpg);
     background-position: center;
     background-size: cover;
-    border-radius: 5px;
   }
-  .project_item:nth-of-type(4) {
-    background: url(Images/5.jpg);
+  .item4 {
+    background: rgba(0,0,0, .7) url(Images/5.jpg);
     background-position: center;
     background-size: cover;
-    border-radius: 5px;
   }
+  .item5 {
+    background: rgba(0,0,0, .7) url(/HTML-Emails/Heroku-Email/screenshot.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .item6 {
+    background: rgba(0,0,0, .7) url(/HTML-Emails/ProWritingAid/screenshot.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .item7 {
+    background: rgba(0,0,0, .7) url(/HTML-Emails/ProWritingAid/screenshot.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+
   /* Adjusting the mobile footer */
   .side_content {
     display: none;
@@ -696,25 +763,20 @@ img {
 
 @media (max-width: 400px) {
 
+  /* Change main padding */
+  main {
+    padding: 0 1rem;
+  }
+
   /* Hide Section heading */
   .sec_heading::after {
     display: none;
-  }
-
-  /* Change logo scale and transition speed */
-  .logo {
-    transform: scale(1.4);
-    transition-duration: 300ms;
   }
 
   /* reduce padding from nav */
   nav {
     padding: 0 20px;
   }
-  .logo.place {
-    left: 20px;
-  }
-
 
   /* change the layout of the skills container */
   .skills {

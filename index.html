@@ -16,11 +16,11 @@
 </head>
 <body>
     <nav>
-        
         <div class="logo">
-            <a href="#">NN</a>
-            <svg height="50" width="55" class="logo_wrapper">
+            <a href="#" class="name">NN</a>
+            <svg height="46" width="55" class="logo_wrapper">
                 <path class="logo_path" fill="none" d="M12.5 0 L37.5 0 L50 20 L37.5 40 L12.5 40 L0 20 L13.5 0 Z" />
+                <path class="logo_cover" d="M12.5 0 L37.5 0 L50 20 L37.5 40 L12.5 40 L0 20 L13.5 0 Z" />
             </svg>
         </div>
         <ul class="mobile_nav">
@@ -50,8 +50,8 @@
         <section class="section hero" id="hero">
             <h1>Hi, my name is </h1>
             <h2>Nyi Nyi Moe Htet</h2>
-            <h3>Junior Frontend Developer</h3>
-            <p>I like building responsive websites.</p>
+            <h3>Frontend Developer</h3>
+            <p>I build responsive websites and HTML Emails which works on different email clients.</p>
             <a href="#" class="btn">My Resume</a>
         </section>
         <section class="section about slide-in" id="about">
@@ -102,10 +102,68 @@
         </section>
         <section class="section projects" id="projects">
             <h2 class="sec_heading slide-in">Personal Projects</h2>
-            <div class="projects_container">
-                <div class="project_item slide-in">
+            <div class="filter">
+                <div class="bubble" value="email">HTML EMAILS</div>
+                <div class="bubble" value="frontend">FRONTEND PROJECTS</div>
+            </div>
+            <div class="projects_container slide-in">
+
+                <!-- HTML Emails -->
+
+                <a href="/HTML-Emails/Heroku-Email/heroku.html">
+                    <div class="project_item item5" value="email">
+                        <h3>Heroku Email Clone</h3>
+                    
+                    <div class="description">
+                        The html email is fully responsive and it is tested with litmus.
+                        <br><br>
+                        NOTES: The links in the email are set to #.
+                    </div>
+                    <ul class="tech">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                    </div>
+                </a>
+
+                <a href="/HTML-Emails/ProWritingAid/ProWritingAid.html">
+                    <div class="project_item item6" value="email">
+                        <h3>ProWritingAid Email Clone</h3>
+                    
+                        <div class="description">
+                            The html email is fully responsive and it is tested with litmus.
+                            <br><br>
+                            NOTES: The links in the email are set to #.
+                        </div>
+                    <ul class="tech">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                    </div>
+                </a>
+
+                <a href="/HTML-Emails/Fiverr-Discount-Email/Fiverr.html">
+                    <div class="project_item item7" value="email">
+                        <h3>Last Email Clone</h3>
+                    
+                        <div class="description">
+                            The html email is fully responsive and it is tested with litmus.
+                            <br><br>
+                            NOTES: The links in the email are set to #.
+                        </div>
+                    <ul class="tech">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                    </div>
+                </a>
+
+                <!-- Frontend Projects -->
+
+                <a href="#">
+                <div class="project_item item1" value="frontend">
                     <h3>Social Media Website</h3>
-                    <a href="#" class="external_link"><img src="/Images/4.jpg" alt="" class="preview"></a>
+                    
                     <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>
                     <ul class="tech">
                         <li>HTML</li>
@@ -113,9 +171,12 @@
                         <li>JavaScript</li>
                     </ul>
                 </div>
-                <div class="project_item slide-in">
+                </a>
+
+                <a href="#">
+                <div class="project_item item2" value="frontend">
                     <h3>Movies Website</h3>
-                    <a href="#" class="external_link"><img src="/Images/5.jpg" alt="" class="preview"></a>
+                    
                     <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>
                     <ul class="tech">
                         <li>HTML</li>
@@ -123,9 +184,12 @@
                         <li>JavaScript</li>
                     </ul>
                 </div>
-                <div class="project_item slide-in">
+                </a>
+
+                <a href="#">
+                <div class="project_item item3" value="frontend">
                     <h3>E-commerce Website</h3>
-                    <a href="#" class="external_link"><img src="/Images/6.jpg" alt="" class="preview"></a>
+                    
                     <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>
                     <ul class="tech">
                         <li>HTML</li>
@@ -133,9 +197,12 @@
                         <li>JavaScript</li>
                     </ul>
                 </div>
-                <div class="project_item slide-in">
+                </a>
+
+                <a href="#">
+                <div class="project_item item4" value="frontend">
                     <h3>Chating Room Website</h3>
-                    <a href="#" class="external_link"><img src="/Images/7.jpg" alt="" class="preview"></a>
+                    
                     <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>                    
                     <ul class="tech">
                         <li>HTML</li>
@@ -143,6 +210,8 @@
                         <li>JavaScript</li>
                     </ul>
                 </div>
+                </a>
+                    
             </div>
         </section>
         <section class="section contact slide-in" id="contact">

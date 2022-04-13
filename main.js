@@ -66,16 +66,14 @@ meterbars.forEach(bar => meterbarObserver.observe(bar));
 
 
 //Animating the page loading
-document.querySelector('.logo_path').classList.add('draw');
-document.querySelector('.logo').classList.add('place');
 const timeline = gsap.timeline({defaults: {duration: .4} });
 timeline
-    .fromTo('.logo a', {opacity: 0}, {opacity: 1}, .4)
-    .fromTo('.desktop_nav > *', {opacity: 0, y: '-100%'}, {delay: 1, opacity: 1, y: 0, stagger: .1})
+    .fromTo('.logo_cover', {scale: 1, rotation: 0}, {scale: 0, rotation: 270, duration: 1.1})
+    .fromTo('.name', {}, {textShadow: "0 0 10px", fontWeight: 'bold', duration: .2})
+    .fromTo('.desktop_nav > *', {opacity: 0, y: '-100%'}, {opacity: 1, y: 0, stagger: .1})
     .fromTo('.burger_menu', {opacity: 0, y: '-100%'}, {opacity: 1, y: 0}, '<')
     .fromTo('.hero > *', {opacity: 0, y: '40%'}, {opacity: 1, y: 0, stagger: .1})
     .fromTo('.side_content', {opacity: 0}, {opacity: 1,})
-
 
 
 
@@ -113,4 +111,50 @@ function closeMobileNav() {
     burgerMenu.dataset.close = 'true';
     main.classList.remove('blur');
 }
+
+// Handle the project filter 
+const bubbles = document.querySelectorAll('.bubble')
+const projectItems = document.querySelectorAll('.project_item')
+let filter = []
+
+bubbles.forEach(bubble => {
+    bubble.addEventListener('click', e => {
+
+        const value = e.target.getAttribute('value')
+
+        // Check if the bubble is selected
+        let isSelected = e.target.classList.contains('selected')
+
+        // If the bubble is not selected yet, add it to the filter
+        if(!isSelected) {
+            filter.push(value)
+        } 
+
+        // If the bubble is already selected, remove from the filter
+        else {
+            filter = filter.filter(item => item != value)
+        }
+
+        // Toggle selected class
+        e.target.classList.toggle('selected')
+
+        // If the filter arr is empty, show all items and return
+        if(filter.length <= 0) {
+            projectItems.forEach(item => {
+                item.classList.remove('hide')
+            })
+            return
+        }
+
+        // Filter the project items
+        projectItems.forEach((item) => {
+            if(filter.includes(item.getAttribute('value'))) {
+                item.classList.remove('hide')
+            } else {
+                item.classList.add('hide')
+            }
+        })
+
+    })
+})
 
