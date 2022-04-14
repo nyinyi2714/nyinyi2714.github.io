@@ -65,14 +65,12 @@
             width: 100%;
             border-radius: 5px;
         }
-        .instructions {
-            display: block;
+        .instructions .two-columns .column {
             text-align: left;
-        }
-        .img-container {
-            padding-right: 17.5px;
-            padding-top: 10px;
+            width: 100%;
+            max-width: 465px;
             vertical-align: top;
+            display: inline-block;
         }
         .column {
             display: inline-block;
@@ -100,16 +98,13 @@
         }
 
         .instructions img {
-            max-width: 35px;
+            max-width: 50px;
         }
         .padding {
             padding: 0 17.5px;
         }
 
         @media screen and (min-width: 400px) {
-            .instructions img {
-                max-width: 50px;
-            }
             .padding {
                 padding: 0 35px;
             }
@@ -159,49 +154,87 @@
             <!-- Instructions -->
             <tr>
                 <td>
-                    <table class="instructions padding">
+                    <table class="instructions" width="100%">
 
                         <!-- First Row -->
                         <tr>
-                            <td class="img-container">
-                                <img src="https://i.ibb.co/Wyc0tJP/flow.png" alt="flow">
-                            </td>
-                            <td>
-                                <p class="subheading">Set up your CI/CD workflow</p>
-                                <p style="padding: 5px 0 40px">
-                                    Deploy apps using Heroku's easy-to-use, structured workflow for continuous delivery, including Heroku Pipelines, Heroku CI,* review apps, and GitHub integration.
-                                </p>
+                            <td class="two-columns padding">
+
+                                <table class="column" style="max-width: 60px; padding: 10px 0 17.5px">
+                                    <tr>
+                                        <td class="img-container">
+                                            <img src="https://i.ibb.co/Wyc0tJP/flow.png" alt="flow">
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td>
+                                            <p class="subheading">Set up your CI/CD workflow</p>
+                                            <p style="padding: 5px 0 40px">
+                                                Deploy apps using Heroku's easy-to-use, structured workflow for continuous delivery, including Heroku Pipelines, Heroku CI,* review apps, and GitHub integration.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+
                             </td>
                         </tr>
 
                         <!-- Second Row -->
                         <tr>
-                            <td class="img-container">
-                                <img src="https://i.ibb.co/0ZRjhV6/heroku-team.png" alt="heroku-team">
-                            </td>
-                            <td>
-                                <p class="subheading">Create or join a Heroku Team</p>
-                                <p style="padding: 5px 0 40px">
-                                    Unify collaboration, administration, and billing with fine-grained control for all your apps with Heroku Teams.*
-                                </p>
+                            <td class="two-columns padding">
+
+                                <table class="column" style="max-width: 60px; padding: 10px 0 17.5px">
+                                    <tr>
+                                        <td class="img-container">
+                                            <img src="https://i.ibb.co/0ZRjhV6/heroku-team.png" alt="heroku-team">
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td>
+                                            <p class="subheading">Create or join a Heroku Team</p>
+                                            <p style="padding: 5px 0 40px">
+                                                Unify collaboration, administration, and billing with fine-grained control for all your apps with Heroku Teams.*
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                
                             </td>
                         </tr>
 
                         <!-- Third Row -->
                         <tr>
-                            <td class="img-container">
-                                <img src="https://i.ibb.co/DCW99Vz/data.png" alt="data">
-                            </td>
-                            <td>
-                                <p class="subheading">Integrate data</p>
-                                <p style="padding: 5px 0 40px">
-                                    Build data-driven apps more easily with managed services from Heroku and other ecosystem partners that are based on popular open source technologies, including PostgreSQL, Apache Kafka, Redis, and more.
-                                </p>
+                            <td class="two-columns padding">
+                                
+                                <table class="column" style="max-width: 60px; padding: 10px 0 17.5px">
+                                    <tr>
+                                        <td class="img-container">
+                                            <img src="https://i.ibb.co/DCW99Vz/data.png" alt="data">
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td>
+                                            <p class="subheading">Integrate data</p>
+                                            <p style="padding: 5px 0 40px">
+                                                Build data-driven apps more easily with managed services from Heroku and other ecosystem partners that are based on popular open source technologies, including PostgreSQL, Apache Kafka, Redis, and more.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+
                             </td>
                         </tr>
 
                     </table>
-
                 </td>
             </tr>
 
