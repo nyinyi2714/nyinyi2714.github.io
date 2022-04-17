@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Heroku! Get more from the platform.</title>
     <style>
-        * {
+        p {
             padding: 0;
             margin: 0;
         }
         a {
+            color: inherit;
             display: inline-block;
             height: 0;
             text-decoration: none;
@@ -24,9 +25,12 @@
             border-spacing: 0;
             border-collapse: collapse;
         }
+        tr, td {
+            padding: 0;
+        }
         center {
             width: 100%;
-            padding: 50px 0 20px;
+            padding-top: 50px;
             background-color: #473A8F;
             line-height: 1.5;
         }
@@ -65,6 +69,10 @@
             width: 100%;
             border-radius: 5px;
         }
+        .img-container {
+            padding: 10px 0 17.5px;
+        }
+        
         .instructions .two-columns .column {
             text-align: left;
             width: 100%;
@@ -78,12 +86,10 @@
             vertical-align: top;
         }
         .two-columns .column {
-            padding: 0px 17.5px;
             max-width: 280px;
         }
         .three-columns .column {
-            padding-top: 20px;
-            max-width: 218px;
+            max-width: 184px;
         }
         .footer {
             text-align: center;
@@ -92,14 +98,10 @@
             background-color: #473A8F;
             color: #8a7ecb;
         }
-        .social-icons img {
-            margin: 2px;
-            max-width: 16px;
+        .social-icons td {
+            padding: 2px;
         }
 
-        .instructions img {
-            max-width: 50px;
-        }
         .padding {
             padding: 0 17.5px;
         }
@@ -120,17 +122,22 @@
             <!-- Logo -->
             <tr>
                 <td>
-                    <a href="#"><img src="https://i.ibb.co/kmTLBpx/Logo.png" alt="Logo"></a>
+                    <a href="#"><img src="https://i.ibb.co/qWhk4JZ/Logo.png" alt="Logo"></a>
                 </td>
             </tr>
 
             <!-- Welcome -->
             <tr>
-                <td class='padding' style="padding-top: 35px; padding-bottom: 35px; text-align: left;">
+                <td class='padding' style="padding-top: 35px;  text-align: left;">
                     <p>
                         <b>Hello John,</b>
                     </p>
-                    <p style="padding-top: 15px">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="padding" style="padding-top: 15px; padding-bottom: 35px; text-align: left;">
+                    <p>
                         Welcome to Heroku! Now you and your team can build and run apps on one integrated platform that combines compute, data, and workflow with a high-productivity developer experience.
                     </p>
                 </td>
@@ -143,9 +150,14 @@
 
             <!-- First Section -->
             <tr>
-                <td class="padding" style="padding-top: 35px; padding-bottom: 35px;">
+                <td class="padding" style="padding-top: 35px;">
                     <p class="heading">Stay productive on Heroku</p>
-                    <p style="text-align: left; padding-top: 20px">
+                </td>
+            </tr>
+
+            <tr>
+                <td class='padding' style="text-align: left; padding-top: 20px; padding-bottom: 35px;">
+                    <p>
                         Get started by deploying an app to Heroku and taking these simple steps to help you and your team rapidly deliver apps for your business.
                     </p>
                 </td>
@@ -160,24 +172,45 @@
                         <tr>
                             <td class="two-columns padding">
 
-                                <table class="column" style="max-width: 60px; padding: 10px 0 17.5px">
+                                <!--[if (gte mso 9)|(IE)]>
+                                <table width="600">
+                                    <tr>
+                                        <td width="60" style="vertical-align: top;">
+                                <![endif]-->
+
+                                <table class="column" style="max-width: 60px;">
                                     <tr>
                                         <td class="img-container">
-                                            <img src="https://i.ibb.co/Wyc0tJP/flow.png" alt="flow">
+                                            <img src="https://i.ibb.co/b3ybsQH/flow.png" alt="flow">
                                         </td>
                                     </tr>
                                 </table>
+
+                                <!--[if (gte mso 9)|(IE)]>
+                                    </td>
+                                    <td width="465">
+                                <![endif]-->
 
                                 <table class="column">
                                     <tr>
                                         <td>
                                             <p class="subheading">Set up your CI/CD workflow</p>
-                                            <p style="padding: 5px 0 40px">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 5px 0 40px">
+                                            <p>
                                                 Deploy apps using Heroku's easy-to-use, structured workflow for continuous delivery, including Heroku Pipelines, Heroku CI,* review apps, and GitHub integration.
                                             </p>
                                         </td>
                                     </tr>
                                 </table>
+
+                                <!--[if (gte mso 9)|(IE)]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                <![endif]-->
 
                             </td>
                         </tr>
@@ -186,24 +219,45 @@
                         <tr>
                             <td class="two-columns padding">
 
-                                <table class="column" style="max-width: 60px; padding: 10px 0 17.5px">
+                                <!--[if (gte mso 9)|(IE)]>
+                                <table width="600">
+                                    <tr>
+                                        <td width="60" style="vertical-align: top;">
+                                <![endif]-->
+
+                                <table class="column" style="max-width: 60px;">
                                     <tr>
                                         <td class="img-container">
-                                            <img src="https://i.ibb.co/0ZRjhV6/heroku-team.png" alt="heroku-team">
+                                            <img src="https://i.ibb.co/D1TxSp9/team.png" alt="team">
                                         </td>
                                     </tr>
                                 </table>
+
+                                <!--[if (gte mso 9)|(IE)]>
+                                    </td>
+                                    <td width="465">
+                                <![endif]-->
 
                                 <table class="column">
                                     <tr>
                                         <td>
                                             <p class="subheading">Create or join a Heroku Team</p>
-                                            <p style="padding: 5px 0 40px">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 5px 0 40px">
+                                            <p>
                                                 Unify collaboration, administration, and billing with fine-grained control for all your apps with Heroku Teams.*
                                             </p>
                                         </td>
                                     </tr>
                                 </table>
+
+                                <!--[if (gte mso 9)|(IE)]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                <![endif]-->
                                 
                             </td>
                         </tr>
@@ -212,24 +266,45 @@
                         <tr>
                             <td class="two-columns padding">
                                 
-                                <table class="column" style="max-width: 60px; padding: 10px 0 17.5px">
+                                <!--[if (gte mso 9)|(IE)]>
+                                <table width="600">
+                                    <tr>
+                                        <td width="60" style="vertical-align: top;">
+                                <![endif]-->
+
+                                <table class="column" style="max-width: 60px;">
                                     <tr>
                                         <td class="img-container">
-                                            <img src="https://i.ibb.co/DCW99Vz/data.png" alt="data">
+                                            <img src="https://i.ibb.co/ssLrpsC/data.png" alt="data">
                                         </td>
                                     </tr>
                                 </table>
+
+                                <!--[if (gte mso 9)|(IE)]>
+                                    </td>
+                                    <td width="465">
+                                <![endif]-->
 
                                 <table class="column">
                                     <tr>
                                         <td>
                                             <p class="subheading">Integrate data</p>
-                                            <p style="padding: 5px 0 40px">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 5px 0 40px">
+                                            <p>
                                                 Build data-driven apps more easily with managed services from Heroku and other ecosystem partners that are based on popular open source technologies, including PostgreSQL, Apache Kafka, Redis, and more.
                                             </p>
                                         </td>
                                     </tr>
                                 </table>
+
+                                <!--[if (gte mso 9)|(IE)]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                <![endif]-->
 
                             </td>
                         </tr>
@@ -250,22 +325,28 @@
                     <table>
 
                         <tr>
-                            <td>
-                                <p class="heading" style="padding:0px 17.5px 25px">Find more tips and inspiration</p>
+                            <td style="padding: 0 17.5px 25px" align="center">
+                                <p class="heading">Find more tips and inspiration</p>
                             </td>
                         </tr>
 
                         <tr>
                             <td class="two-columns" width="100%">
 
-                                <table class="column" style="padding-bottom: 35px;">
+                                <!--[if (gte mso 9)|(IE)]>
+                                    <table width="600">
+                                        <tr>
+                                            <td width="280">
+                                <![endif]-->
+
+                                <table class="column">
                                     <tr>
-                                        <td style="padding-bottom: 20px">
-                                            <a href="#"><img src="https://i.ibb.co/bWRLXrH/customer.png" alt="customer"></a>
+                                        <td style="padding: 0 17.5px 20px">
+                                            <a href="#"><img src="https://i.ibb.co/pjCmCks/customer.png" alt="customer"></a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td style="padding: 0 17.5px 35px;" align="center">
                                             <p>
                                                 Learn how Heroku helped Goodshuffle and other companies quickly launch and scale their business.
                                             </p>
@@ -273,14 +354,19 @@
                                     </tr>
                                 </table>
 
-                                <table class="column" style="padding-bottom: 35px;">
+                                <!--[if (gte mso 9)|(IE)]>
+                                    </td>
+                                    <td width="280">
+                                <![endif]-->
+
+                                <table class="column">
                                     <tr>
-                                        <td style="padding-bottom: 20px">
-                                            <a href="#"><img src="https://i.ibb.co/1sk0R6B/video-player.png" alt="video-player"></a>
+                                        <td style="padding: 0 17.5px 20px">
+                                            <a href="#"><img src="https://i.ibb.co/n17gdvQ/video-player.png" alt="video-player"></a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td style="padding: 0 17.5px 35px;" align="center">
                                             <p>
                                                 Watch this Heroku Showcase tutorial to learn how to deploy your apps to Heroku, or view all Heroku videos.
                                             </p>
@@ -288,6 +374,11 @@
                                     </tr>
                                 </table>
 
+                                <!--[if (gte mso 9)|(IE)]>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <![endif]-->
                             </td>
                         </tr>
 
@@ -298,7 +389,26 @@
 
             <!-- CTA Button -->
             <tr>
-                <td style="padding: 0 35px 35px"><a href="#" class="btn">Get Started on Heroku</a></td>
+                <td style="padding: 0 35px 35px">
+                    <!--[if mso]>
+                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:35px;v-text-anchor:middle;width:200px;" arcsize="15%" stroke="f" fillcolor="#408fec">
+                          <w:anchorlock/>
+                          <center>
+                            <a href="#"
+                            style="height: auto; background-color:#408fec;border-radius:5px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">Get Started on Heroku</a>
+                          </center>
+                        </v:roundrect>
+                    <![endif]-->
+
+                    <table style="mso-hide:all;" width="100%">
+                        <tr>
+                            <td>
+                                <a style="mso-hide:all;" href="#" class="btn">Get Started on Heroku</a>
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
             </tr>
 
             <!-- Line -->
@@ -308,13 +418,26 @@
 
             <!-- Bottom -->
             <tr>
-                <td class="color padding" style="padding-bottom: 35px; padding-top:35px; text-align: left;">
-                    <p style="padding-bottom: 25px">*Heroku allows you to get up and running quickly without additional cost. The platform grows with you—add paid services as you need them to scale or optimize your apps and teams, including Heroku CI, Heroku Teams (5+ users), and more.</p>
-                    <p style="font-size: 23px; padding-bottom: 10px;">Happy Coding</p>
-                    <p style="padding-bottom: 15px;"><b>The Heroku Team</b></p>
+                <td class="padding" style="padding-bottom: 35px; padding-top:35px; text-align: left;">
+                    <table width="100%" class="color">
+                        <tr>
+                            <td style="padding-bottom: 25px">
+                                <p>*Heroku allows you to get up and running quickly without additional cost. The platform grows with you—add paid services as you need them to scale or optimize your apps and teams, including Heroku CI, Heroku Teams (5+ users), and more.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 23px; padding-bottom: 10px;">
+                                <p>Happy Coding</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 15px;">
+                                <p><b>The Heroku Team</b></p>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
-
 
         </table>
 
@@ -322,42 +445,85 @@
 
         <table class="footer">
             <tr>
-                <td class="three-columns" style="padding: 20px 20px 0;">
+                <td class="three-columns" style="padding: 0 20px 20px;">
 
-                    <table class="column" style="padding-right: 15px">
+                    <!--[if (gte mso 9)|(IE)]>
+                        <table width="600">
+                            <tr>
+                                <td width="184">
+                    <![endif]-->
+
+                    <table class="column">
                         <tr>
-                            <td>
-                                <a href="#"><img src="https://i.ibb.co/5GsrNS2/saleforce.png" alt="saleforce"></a>
+                            <td style="padding-top: 20px; padding-right: 15px">
+                                <a href="#"><img src="https://i.ibb.co/vXvdf0y/sale.png" alt="sale"></a>
                             </td>
                         </tr>
                     </table>
 
+                    <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            <td width="184">
+                    <![endif]-->
+
                     <table class="column">
                         <tr>
-                            <td>
-                                <p style="padding: 0 15px;">
-                                    Salesforce
-                                    415 Mission Street, 3rd Floor
-                                    San Francisco, CA 94105
+                            <td style="padding: 20px 15px 0;">
+                                <p style='color: #8a7ecb;'>
+                                    Salesforce 415 Mission Street, 3rd Floor San Francisco, CA 94105
                                 </p>
                             </td>
                         </tr>
                     </table>
 
-                    <table class="column" style="max-width: 115px">
+                    <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        <td width="184">
+                    <![endif]-->
+
+                    <table class="column">
                         <tr>
-                            <td class="social-icons">
-                                <a href="#"><img src="https://i.ibb.co/ZGHmPLy/blog.png" alt="blog"></a>
-                                <a href="#"><img src="https://i.ibb.co/CBtLSsN/microphone.png" alt="microphone"></a>
-                                <a href="#"><img src="https://i.ibb.co/9gPqYtD/twitter.png" alt="twitter"></a>
-                                <a href="#"><img src="https://i.ibb.co/rcZL7v9/instagram.png" alt="instagram"></a>
-                                <a href="#"><img src="https://i.ibb.co/sskWcH6/youtube.png" alt="youtube"></a>
-                                <a href="#"><img src="https://i.ibb.co/Sdgp4Bd/facebook.png" alt="facebook"></a>
-                                <a href="#"><img src="https://i.ibb.co/KqHQ3Wm/heroku-on-github.png" alt="heroku-on-github"></a>
-                                <a href="#"><img src="https://i.ibb.co/RCX3kVM/linkedin.png" alt="linkedin"></a>
+                            <td class="social-icons" style="padding: 20px 52px 0">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <a href="#"><img src="https://i.ibb.co/3NTgjxs/blog.png" alt="blog"></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="https://i.ibb.co/rwbg8LF/microphone.png" alt="microphone"></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="https://i.ibb.co/tLRgzp1/twitter.png" alt="twitter"></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="https://i.ibb.co/54XLyBQ/instagram.png" alt="instagram"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#"><img src="https://i.ibb.co/4YPNCZw/youtube.png" alt="youtube"></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="https://i.ibb.co/pPVkP14/facebook.png" alt="facebook"></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="https://i.ibb.co/M7K9hyZ/github.png" alt="github"></a>
+                                        </td>
+                                        <td>
+                                            <a href="#"><img src="https://i.ibb.co/jZTDDTZ/linkedin.png" alt="linkedin"></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                
                             </td>
                         </tr>
                     </table>
+
+                    <!--[if (gte mso 9)|(IE)]>
+                                </td>
+                            </tr>
+                        </table>
+                    <![endif]-->
 
                 </td>
             </tr>
@@ -367,6 +533,3 @@
     </center>
 </body>
 </html>
-
-
-
