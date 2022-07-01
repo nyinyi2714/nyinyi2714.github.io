@@ -528,7 +528,7 @@ main {
   background-size: cover;
 }
 .item7:hover {
-  background: rgba(0,0,0, .7) url(/HTML-Emails/Heroku-Email/screenshot.jpg);
+  background: rgba(0,0,0, .7) url(/HTML-Emails/Order-Confirmation/screenshot.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -737,7 +737,7 @@ img {
     background-size: cover;
   }
   .item7 {
-    background: rgba(0,0,0, .7) url(/HTML-Emails/ProWritingAid/screenshot.jpg);
+    background: rgba(0,0,0, .7) url(/HTML-Emails/Order-Confirmation/screenshot.jpg);
     background-position: center;
     background-size: cover;
   }
