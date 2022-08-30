@@ -12,7 +12,7 @@ nextBtn.addEventListener('click', () => {
 
     disableButtons()
     if (num >= 5) num = 0
-    gallery.style.backgroundImage = `url('/Images/foodphoto${++num}.avif')`
+    gallery.style.backgroundImage = `url('./Images/foodphoto${++num}.avif')`
     setTimeout(enableButtons, 900)
 })
 
@@ -21,7 +21,7 @@ backBtn.addEventListener('click', () => {
 
     disableButtons()
     if (num <= 1) num = 6
-    gallery.style.backgroundImage = `url('/Images/foodphoto${--num}.avif')`
+    gallery.style.backgroundImage = `url('./Images/foodphoto${--num}.avif')`
     setTimeout(enableButtons, 900)
 })
 
