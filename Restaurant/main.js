@@ -12,7 +12,7 @@ nextBtn.addEventListener('click', () => {
 
     disableButtons()
     if (num >= 5) num = 0
-    gallery.style.backgroundImage = `url('./Images/foodphoto${++num}.avif')`
+    gallery.style.backgroundImage = `url('./restaurant-images/foodphoto${++num}.avif')`
     setTimeout(enableButtons, 900)
 })
 
@@ -21,7 +21,7 @@ backBtn.addEventListener('click', () => {
 
     disableButtons()
     if (num <= 1) num = 6
-    gallery.style.backgroundImage = `url('./Images/foodphoto${--num}.avif')`
+    gallery.style.backgroundImage = `url('./restaurant-images/foodphoto${--num}.avif')`
     setTimeout(enableButtons, 900)
 })
 
@@ -45,10 +45,10 @@ const galleryObserver = new IntersectionObserver(entries => {
 
         if (entry.isIntersecting) {
             banner.classList.remove('red')
-            logo.src = "./Images/white logo.png"
+            logo.src = "./restaurant-images/white logo.png"
         } else {
             banner.classList.add('red')
-            logo.src = "./Images/red logo.png"
+            logo.src = "./restaurant-images/red logo.png"
         }
 
     })
@@ -61,10 +61,10 @@ if (window.innerWidth >= 680) galleryObserver.observe(gallery)
 window.addEventListener('resize', () => {
     if (window.innerWidth >= 680) {
         galleryObserver.observe(gallery)
-        logo.src = "./Images/white logo.png"
+        logo.src = "./restaurant-images/white logo.png"
     } else {
         galleryObserver.unobserve(gallery)
-        logo.src = "./Images/red logo.png"
+        logo.src = "./restaurant-images/red logo.png"
     }
 })
 

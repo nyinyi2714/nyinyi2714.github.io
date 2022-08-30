@@ -143,7 +143,7 @@ ul {
     text-align: center;
 
     border: solid;
-    border-image: url(./Images/email-form-border.png);
+    border-image: url(./restaurant-images/email-form-border.png);
     border-width: 32px;
     border-image-slice: 200;
 }
@@ -209,7 +209,7 @@ label {
     left: -5%;
     width: 120px;
     height: 37px;
-    background-image: url(./Images/decoration2.png);
+    background-image: url(./restaurant-images/decoration2.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -273,7 +273,7 @@ label {
     opacity: 0;
     z-index: -1;
 
-    background-image: url('./Images/white-nav-hover.png');
+    background-image: url('./restaurant-images/white-nav-hover.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -281,7 +281,7 @@ label {
 }
 
 .banner.red .white-links::after {
-    background-image: url('./Images/red-nav-hover.png');
+    background-image: url('./restaurant-images/red-nav-hover.png');
 }
 
 .links li {
@@ -306,7 +306,7 @@ li.border-image {
     background-color: white;
     border: solid;
     border-radius: 13px;
-    border-image-source: url(./Images/nav-border.png);
+    border-image-source: url(./restaurant-images/nav-border.png);
     border-image-slice: 327;
     border-image-width: 20px;
     border-image-outset: 0;
@@ -316,7 +316,7 @@ li.border-image {
 .gallery {
     position: relative;
     min-height: 88vh;
-    background-image: url(./Images/foodphoto1.avif);
+    background-image: url(./restaurant-images/foodphoto1.avif);
     background-position: center;
     background-size: cover;
 
@@ -369,7 +369,7 @@ li.border-image {
     padding: .7rem 1.5rem;
 
     border-style: solid;
-    border-image: url(./Images/button-border.png);
+    border-image: url(./restaurant-images/button-border.png);
     border-image-slice: 247;
     border-image-width: 180px;
     border-image-outset: 0;
@@ -409,7 +409,7 @@ section {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(./Images/decoration.png);
+    background-image: url(./restaurant-images/decoration.png);
 }
 
 .section-a p {
@@ -421,7 +421,7 @@ section {
 }
 
 .section-b, .section-c {
-    background-image: url(./Images/pasta.jpg);
+    background-image: url(./restaurant-images/pasta.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -455,7 +455,7 @@ section {
     right: 101%;
     width: 120px;
     height: 60%;
-    background-image: url(./Images/decoration2.png);
+    background-image: url(./restaurant-images/decoration2.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -469,7 +469,7 @@ section {
     transform: scaleX(-1);
     width: 120px;
     height: 60%;
-    background-image: url(./Images/decoration2.png);
+    background-image: url(./restaurant-images/decoration2.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -486,7 +486,7 @@ section {
 }
 
 .section-c {
-    background-image: url(./Images/table.jpg);
+    background-image: url(./restaurant-images/table.jpg);
     min-height: calc(88vh - 55.17px);
 }
 
