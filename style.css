@@ -34,18 +34,18 @@ body {
   background-color: var(--navy);
 }
 
-.slide-in {
+.slide-in, .filter {
   opacity: 0;
   transform: translateY(10%);
   transition: 500ms ease-in-out;
 }
 
-.slide-in.active {
+.slide-in.active, .filter.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-main.blur {
+.blur {
   filter: blur(10px);
 }
 
@@ -72,6 +72,7 @@ main.blur {
 }
 
 .side_content_left {
+  top: calc(50vh - 12.5px);
   left: 50px;
 }
 
@@ -141,15 +142,10 @@ nav.box_shadow {
   overflow: hidden;
 }
 
-.logo_path, .logo_cover {
+.logo_path {
   transform: translate(1.5px, 4.2px);
   stroke-width: 3px;
   stroke: var(--green);
-}
-
-.logo_cover {
-  transform-origin: 45% 45%;
-  fill: var(--green);
 }
 
 .desktop_nav {
@@ -250,6 +246,7 @@ main {
 }
 
 .hero {
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -265,7 +262,7 @@ main {
 
 .hero h2, .hero h3 {
   color: var(--lightest-slate);
-  font-size: clamp(30px, 5.5vw , 80px);
+  font-size: clamp(20px, 5.5vw , 80px);
   font-weight: 600;
   line-height: 1.1;
 }
@@ -349,39 +346,25 @@ main {
 }
 
 .projects_container {
-  padding: 0 clamp(10px, 3vw, 47px);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
+  box-shadow: inset 0px 0px 10px black;
+  border-radius: 5px;
 
-.filter {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  color: var(--green);
-  font-size: .9rem;
+  padding: 2rem;
   margin-bottom: 2rem;
-}
-
-.bubble {
-  text-align: center;
-  padding: .7rem;
-  border: 1px solid var(--green);
-  border-radius: 25px;
-  cursor: pointer;
-  transition: 100ms ease-in-out;
-}
-.bubble:hover {
-  text-shadow: 0 0 5px;
-}
-.selected {
-  box-shadow: 0 0 5px;
+  
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  justify-items: center;
 }
 
 .projects h3 {
-  font-size: 1.7rem;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.projects h4 {
+  font-size: 1.5rem;
   font-weight: 500;
   margin: clamp(1rem, 2vw, 2rem) 0;
   transition: 200ms ease-in-out;
@@ -396,43 +379,18 @@ main {
   margin: 2rem 0;
 }
 .project_item {
-  align-items: flex-start;
   padding: 1rem clamp(.5rem, 3vw, 1.5rem);
-  max-width: 300px;
+  max-width: 280px;
   height: 300px;
-  transition: 300ms ease-in-out;
   color: transparent;
   cursor: default;
 
+  transition: 300ms ease-in-out;
   background-position: center;
   background-size: cover;
   border-radius: 5px;
   background-blend-mode: darken;
-  
-}
-.show {
-  animation: show 300ms ease-in-out forwards;
-}
 
-.hide {
-  padding: 0;
-  opacity: 0;
-  animation: hide 300ms ease-in-out forwards;
-}
-
-@keyframes hide {
-  100% {
-    height: 0;
-  }
-}
-
-@keyframes show {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 300px;
-  }
 }
 
 .project_item:hover {
@@ -440,7 +398,7 @@ main {
   transform: scale(1.03);
 }
 
-.project_item:hover h3 {
+.project_item:hover h4 {
   color: var(--lightest-slate);
 }
 
@@ -523,7 +481,7 @@ main {
 }
 
 .item7 {
-  background: url(/HTML-Emails/Heroku-Email/screenshot.jpg);
+  background: url(/HTML-Emails/Order-Confirmation/screenshot.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -674,16 +632,6 @@ img {
 /* Mobile Version Breakpoint */
 @media (max-width: 840px) {
 
-  /* Reduce Bubble Filter Gap */
-  .filter {
-    gap: 1rem;
-    font-size: .75rem;
-  }
-
-  .bubble {
-    padding: .5rem;
-  }
-
   /* change to mobile nav */
   .desktop_nav {
     display: none;
@@ -700,7 +648,7 @@ img {
     width: 100%;
     margin: 2rem 0;
   }
-  .project_item {
+  .project_item, .project_item h4 {
     color: var(--lightest-slate);
   }
   .projects h3 {
@@ -800,7 +748,7 @@ img {
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
 
   /* Change main padding */
   main {
@@ -826,5 +774,21 @@ img {
   }
   .skill_name {
     grid-column: 1 / span 2;
+  }
+
+  /* change the grid property of projects_container */
+  .projects_container {
+    grid-template-columns: 1fr;
+  }
+
+  /* change root font size */
+  body, html {
+    font-size: 14px;
+  }
+
+  /* fix name logo place */
+  .name {
+    top: 32%;
+    left: 31%;
   }
 }

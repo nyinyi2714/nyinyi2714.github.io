@@ -20,7 +20,6 @@
             <a href="#" class="name">NN</a>
             <svg height="46" width="55" class="logo_wrapper">
                 <path class="logo_path" fill="none" d="M12.5 0 L37.5 0 L50 20 L37.5 40 L12.5 40 L0 20 L13.5 0 Z" />
-                <path class="logo_cover" d="M12.5 0 L37.5 0 L50 20 L37.5 40 L12.5 40 L0 20 L13.5 0 Z" />
             </svg>
         </div>
         <ul class="mobile_nav">
@@ -54,6 +53,7 @@
             <p>I build responsive websites and HTML Emails which works on different email clients.</p>
             <a href="#" class="btn">My Resume</a>
         </section>
+
         <section class="section about slide-in" id="about">
             <h2 class="sec_heading">About Me</h2>
             <div class="profile_container">
@@ -96,23 +96,22 @@
                 </div>
             </div>
         </section>
+
         <section class="section experience slide-in" id="experience">
             <h2 class="sec_heading">My Experience</h2>
 
         </section>
-        <section class="section projects" id="projects">
+
+        <section class="section projects slide-in" id="projects">
             <h2 class="sec_heading slide-in">Personal Projects</h2>
-            <div class="filter">
-                <div class="bubble" value="email">HTML EMAILS</div>
-                <div class="bubble" value="frontend">FRONTEND PROJECTS</div>
-            </div>
-            <div class="projects_container slide-in">
 
-                <!-- HTML Emails -->
+            <!-- HTML Emails -->
 
-                
+            <h3>HTML EMAILS</h3>
+            <div class="projects_container email slide-in">
+
                 <div class="project_item item5" value="email">
-                    <h3>Heroku Email Clone</h3>
+                    <h4>Heroku Email Clone</h4>
                 
                     <div class="description">
                         The html email is fully responsive and it is tested with PutsMail.
@@ -128,7 +127,7 @@
                 
 
                 <div class="project_item item6" value="email">
-                    <h3>ProWritingAid Email Clone</h3>
+                    <h4>ProWritingAid Email Clone</h4>
                 
                     <div class="description">
                         The html email is fully responsive and it is tested with PutsMail.
@@ -143,7 +142,7 @@
                 </div>
 
                 <div class="project_item item7" value="email">
-                    <h3>Last Email Clone</h3>
+                    <h4>Last Email Clone</h4>
                 
                     <div class="description">
                         The html email is fully responsive and it is tested with PutsMail.
@@ -157,12 +156,29 @@
 
                 </div>
 
-
-                <!-- Frontend Projects -->
-
+                <div class="project_item item7" value="email">
+                    <h4>Last Email Clone</h4>
                 
+                    <div class="description">
+                        The html email is fully responsive and it is tested with PutsMail.
+                        <br><br>
+                        NOTES: The links in the email are set to #.
+                    </div>
+                    <div class="demo">
+                        <a href="/HTML-Emails/Order-Confirmation/Order-Confirmation.html" target="_blank">DEMO</a>
+                        <a href="https://github.com/nyinyi2714/nyinyi2714.github.io/tree/main/HTML-Emails/Order-Confirmation" target="_blank">CODE</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Frontend Projects -->
+
+            <h3>FRONTEND PROJECTS</h3>
+            <div class="projects_container frontend slide-in">    
                 <div class="project_item item1" value="frontend">
-                    <h3>Social Media Website</h3>
+                    <h4>Social Media Website</h4>
                     
                     <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>
                     <ul class="tech">
@@ -175,7 +191,7 @@
 
                 
                 <div class="project_item item2" value="frontend">
-                    <h3>Movies Website</h3>
+                    <h4>Movies Website</h4>
                     
                     <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>
                     <ul class="tech">
@@ -187,7 +203,7 @@
                 
 
                 <div class="project_item item3" value="frontend">
-                    <h3>E-commerce Website</h3>
+                    <h4>E-commerce Website</h4>
                     
                     <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>
                     <ul class="tech">
@@ -198,7 +214,7 @@
                 </div>
 
                 <div class="project_item item4" value="frontend">
-                    <h3>Chating Room Website</h3>
+                    <h4>Chating Room Website</h4>
                     
                     <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>                    
                     <ul class="tech">
@@ -209,7 +225,9 @@
                 </div>
                     
             </div>
+
         </section>
+        
         <section class="section contact slide-in" id="contact">
             <h2 class="sec_heading">Contact Me</h2>
             <form action="" class="contact_form">
