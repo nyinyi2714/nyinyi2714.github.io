@@ -151,7 +151,7 @@ nav.box_shadow {
 .desktop_nav {
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: 300px;
   margin-right: 50px;
 }
 
@@ -327,22 +327,23 @@ main {
 }
 
 .bar1.fill {
-  width: 80%;
+  width: 75%;
 }
 .bar2.fill {
-  width: 80%;
+  width: 70%;
 }
 .bar3.fill {
-  width: 65%;
+  width: 70%;
 }
 .bar4.fill {
-  width: 75%;
-}
-.bar5.fill {
   width: 50%;
 }
-.bar6.fill {
-  width: 75%;
+.bar5.fill {
+  width: 65%;
+}
+
+#experience, #experience-nav-btn {
+  display: none;
 }
 
 .projects_container {
