@@ -289,7 +289,6 @@ main {
 .profile_img {
   position: relative;
   display: block;
-  width: max(200px, 20vw);
   height: max(200px, 20vw);
   border-radius: 5px;
   justify-self: center;
