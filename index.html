@@ -1,245 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyi Nyi Moe Htet</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nyi Nyi Moe Htet</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="main.js" defer></script>
 </head>
+
 <body>
-    <nav>
-        <div class="logo">
-            <a href="#" class="name">NN</a>
-            <svg height="46" width="55" class="logo_wrapper">
-                <path class="logo_path" fill="none" d="M12.5 0 L37.5 0 L50 20 L37.5 40 L12.5 40 L0 20 L13.5 0 Z" />
-            </svg>
-        </div>
-        <ul class="mobile_nav">
-            <div class="burger_menu" data-close="true">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="extended_menu_background"></div>
-            <div class="extended_menu">
-                <a href="#about" class="mobile_nav_item">About</a>
-                <!-- <a href="#experience" class="mobile_nav_item">Experience</a> -->
-                <a href="#projects" class="mobile_nav_item">Projects</a>
-                <a href="#contact" class="mobile_nav_item">Contact</a>
-                <a href=https://github.com/nyinyi2714/nyinyi2714.github.io/blob/main/NyiNyiMoe_Htet_Resume.pdf target="_blank" class="btn">My Resume</a>
-            </div>
-        </ul>
-        <ul class="desktop_nav">
-            <li><a href="#about" class="desktop_nav_item" name="about">About</a></li>
-            <!-- <li><a href="#experience" class="desktop_nav_item" name="experience">Experience</a></li> -->
-            <li><a href="#projects" class="desktop_nav_item" name="projects">Projects</a></li>
-            <li><a href="#contact" class="desktop_nav_item" name="contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section class="section hero" id="hero">
-            <h1>Hi, my name is </h1>
-            <h2>Nyi Nyi Moe Htet</h2>
-            <h3>Frontend Developer</h3>
-            <p>I enjoy building responsive websites and currently 
-                expanding my knowledge in frontend web development.</p>
-            <a href=https://github.com/nyinyi2714/nyinyi2714.github.io/blob/main/NyiNyiMoe_Htet_Resume.pdf target="_blank" class="btn">My Resume</a>
-        </section>
-
-        <section class="section about slide-in" id="about">
-            <h2 class="sec_heading">About Me</h2>
-            <div class="profile_container">
-                <div class="profile_img"><img src="/profile.jpg" alt="profile photo" class="img"></div>
-                <div class="profile">
-                    <p>I am a junior at California State University, Northridge. 
-                        With a strong passion for web development, I love creating engaging and 
-                        functional websites. My goal is to gain real-world experience in programming 
-                        and web development to further hone my skills and knowledge.</p>
-                    <h3>My skills</h3>
-                    <div class="skills">
-                        <li class="skill_name">HTML</li>
-                        <div class="meter">
-                            <div class="meterbar bar1"></div>
-                        </div>
-                        <span class="percent">75%</span>
-                        <li class="skill_name">CSS</li>
-                        <div class="meter">
-                            <div class="meterbar bar2"></div>
-                        </div>
-                        <span class="percent">70%</span>
-                        <li class="skill_name">JavaScript</li>
-                        <div class="meter">
-                            <div class="meterbar bar3"></div>
-                        </div>
-                        <span class="percent">70%</span>
-                        <li class="skill_name">React</li>
-                        <div class="meter">
-                            <div class="meterbar bar4"></div>
-                        </div>
-                        <span class="percent">50%</span>
-                        <li class="skill_name">Java</li>
-                        <div class="meter">
-                            <div class="meterbar bar5"></div>
-                        </div>
-                        <span class="percent">65%</span>                      
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section experience slide-in" id="experience">
-            <h2 class="sec_heading">My Experience</h2>
-
-        </section>
-
-        <section class="section projects slide-in" id="projects">
-            <h2 class="sec_heading slide-in">Personal Projects</h2>
-
-            <!-- HTML Emails -->
-
-            <h3>HTML EMAILS</h3>
-            <div class="projects_container email slide-in">
-
-                <div class="project_item item5" value="email">
-                    <h4>Heroku Email Clone</h4>
-                
-                    <div class="description">
-                        The html email is responsive and it is tested with PutsMail.
-                        <br><br>
-                        NOTES: The links in the email are set to #.
-                        <div class="demo"> 
-                            <a href="/HTML-Emails/Heroku-Email/heroku.html" target="_blank">DEMO</a>
-                            <a href="https://github.com/nyinyi2714/nyinyi2714.github.io/tree/main/HTML-Emails/Heroku-Email" target="_blank">CODE</a>
-                        </div>
-                    </div>
-            
-                </div>
-                
-
-                <div class="project_item item6" value="email">
-                    <h4>ProWritingAid Email Clone</h4>
-                
-                    <div class="description">
-                        The html email is responsive and it is tested with PutsMail.
-                        <br><br>
-                        NOTES: The links in the email are set to #.
-                        <div class="demo">
-                            <a href="/HTML-Emails/ProWritingAid/ProWritingAid.html" target="_blank">DEMO</a>
-                            <a href="https://github.com/nyinyi2714/nyinyi2714.github.io/tree/main/HTML-Emails/ProWritingAid" target="_blank">CODE</a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="project_item item7" value="email">
-                    <h4>Sample Receipt Email</h4>
-                
-                    <div class="description">
-                        The html email is responsive and it is tested with PutsMail.
-                        <br><br>
-                        NOTES: The links in the email are set to #.
-                    </div>
-                    <div class="demo">
-                        <a href="/HTML-Emails/Order-Confirmation/Order-Confirmation.html" target="_blank">DEMO</a>
-                        <a href="https://github.com/nyinyi2714/nyinyi2714.github.io/tree/main/HTML-Emails/Order-Confirmation" target="_blank">CODE</a>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Frontend Projects -->
-            <!-- <h3>FRONTEND PROJECTS</h3>
-            <div class="projects_container frontend slide-in">    
-                <div class="project_item item1" value="frontend">
-                    <h4>Social Media Website</h4>
-                    
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>
-                    <ul class="tech">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-                
-
-                
-                <div class="project_item item2" value="frontend">
-                    <h4>Movies Website</h4>
-                    
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>
-                    <ul class="tech">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-                
-
-                <div class="project_item item3" value="frontend">
-                    <h4>E-commerce Website</h4>
-                    
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>
-                    <ul class="tech">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-
-                <div class="project_item item4" value="frontend">
-                    <h4>Chating Room Website</h4>
-                    
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit eligendi hic vitae rerum distinctio iusto assumenda ex.</div>                    
-                    <ul class="tech">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-                    
-            </div> -->
-
-        </section>
-        
-        <section class="section contact slide-in" id="contact">
-            <h2 class="sec_heading">Contact Me</h2>
-            <form action="mailto:nyinyi2714@gmail.com" method="post" enctype="text/plain" class="contact_form">
-                <label for="name"><input type="text" id="name" placeholder="Name" required></label>
-                <label for="email"><input type="email" id="email" placeholder="Email" required></label>
-                <label for="message" class="message"><textarea name="message" id="message" placeholder="Type your message" required></textarea></label>
-                <button type="submit" class="btn submit slide-in">Send Message</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <div class="mobile_footer social">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href=""><i class="fa-brands fa-codepen"></i></a>
-        </div>
-        <p>Created by Nyi Nyi Moe Htet</p>
-        <p>Email: nyinyi2714@gmail.com</p>
-    </footer>
-    <div class="side_content side_content_left social">
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#"><i class="fa-brands fa-codepen"></i></a>
+  <nav>
+    <div class="logo">
+      <a href="#" class="name">NN</a>
+      <svg height="46" width="55" class="logo_wrapper">
+        <path class="logo_path" fill="none" d="M12.5 0 L37.5 0 L50 20 L37.5 40 L12.5 40 L0 20 L13.5 0 Z" />
+      </svg>
     </div>
-    <div class="side_content side_content_right">
-        nyinyi2714@gmail.com
+    <ul class="mobile_nav">
+      <div class="burger_menu" data-close="true">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="extended_menu_background"></div>
+      <div class="extended_menu">
+        <a href="#about" class="mobile_nav_item">About</a>
+        <a href="#experience" class="mobile_nav_item">Experience</a>
+        <a href="#projects" class="mobile_nav_item">Projects</a>
+      </div>
+    </ul>
+    <ul class="desktop_nav">
+      <li>
+        <a href="#about" class="desktop_nav_item" name="about">
+          About
+        </a>
+      </li>
+      <li>
+        <a href="#experience" class="desktop_nav_item" name="experience">
+          Experience
+        </a>
+      </li>
+      <li>
+        <a href="#projects" class="desktop_nav_item" name="projects">
+          Projects
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <section class="section hero" id="hero">
+      <span>Hi, my name is </span>
+      <h1 class="hero_name">Nyi Nyi Moe Htet</h1>
+      <h2 class="hero_position">Frontend Developer</h2>
+      <span class="btn-wrapper">
+        <a 
+        href=https://github.com/nyinyi2714/nyinyi2714.github.io/blob/main/NyiNyiMoe_Htet_Resume.pdf 
+        target="_blank"
+        class="btn"
+        >
+          Resume
+        </a>
+      </span>
+    </section>
+
+    <section class="section about slide-in" id="about">
+      <h2 class="sec_heading">About Me</h2>
+      <div class="profile_container">
+        <div class="profile_img">
+          <img src="/profile.jpg" alt="profile photo" class="img">
+        </div>
+        <div class="profile">
+          <p>
+            I am a junior at California State University, Northridge,
+            with a strong passion for frontend web development. I
+            thoroughly enjoy creating engaging and functional websites.
+          </p>
+          <p>
+            I am actively involved in the <span class="highlight-text">
+              Luna Tech Team</span>, a group created by CSUN senior
+            students, where we are collaborating on a web application
+            that allows students to enroll in and manage
+            CSUN Senior Design Projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience slide-in" id="experience">
+      <h2 class="sec_heading">Experience</h2>
+      <div class="experience_item">
+        <h4>MAY 2023 — PRESENT</h4>
+        <div class="experience__content">
+          <h3>Frontend Developer · LunaTech</h3>
+          <p class="description">
+            I specialize in building interactive and visually
+            appealing web pages and user interfaces. I also
+            ensure smooth integration of backend functionality
+            into frontend applications and write comprehensive
+            unit tests for React components using React
+            Testing Library.
+          </p>
+          <div class="skills-container">
+            <div class="skill">React</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Github</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects slide-in" id="projects">
+      <h2 class="sec_heading slide-in">Projects</h2>
+      <div class="projects_container slide-in">
+        <div class="project_item item1">
+          <h3>Hotel Reservation App</h3>
+          <h4>Team Leader / Frontend Developer</h4>
+          <p class="description">
+            I've overseen the development of a web app that
+            allows users to view, book, edit, and delete hotel
+            room reservations, while managers can generate reservation
+            statistics reports. We also created user manuals, technical
+            documentation, and written comprehensive tests
+            for functionality assurance.
+          </p>
+          <ul class="skills-container">
+            <li class="skill">React</li>
+            <li class="skill">HTML</li>
+            <li class="skill">CSS</li>
+            <li class="skill">Flask</li>
+            <li class="skill">MongoDB</li>
+            <li class="skill">Github</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    <div class="mobile_footer social">
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href=""><i class="fa-brands fa-codepen"></i></a>
     </div>
+    <p>Created by Nyi Nyi Moe Htet</p>
+    <p>Email: nyinyi2714@gmail.com</p>
+  </footer>
+  <div class="side_content side_content_left social">
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="#"><i class="fa-brands fa-codepen"></i></a>
+  </div>
+  <div class="side_content side_content_right">
+    nyinyi2714@gmail.com
+  </div>
 </body>
+
 </html>
