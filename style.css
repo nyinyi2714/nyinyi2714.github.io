@@ -134,7 +134,7 @@ img {
   font-size: 12px;
   font-weight: 400;
   position: fixed;
-  top: 50vh;
+  top: 40vh;
   writing-mode: vertical-lr;
   cursor: default;
   font-family: "Space Mono", monospace;
@@ -153,8 +153,10 @@ img {
 }
 
 .side_content_left {
-  top: calc(50vh - 12.5px);
+  top: calc(40vh - 12.5px);
   left: 50px;
+  display: flex;
+  gap: 0.4rem;
 }
 
 .social {
@@ -406,6 +408,10 @@ main {
 }
 
 /* Project Section Styles */
+#projects {
+  min-height: 550px;
+}
+
 .project_item h3 {
   font-size: 1.3rem;
   margin-bottom: 7px;
@@ -545,7 +551,7 @@ footer p {
 
   /* Change main padding */
   main {
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 
   /* Hide Section heading */
@@ -582,5 +588,9 @@ footer p {
   .btn {
     font-size: 12px;
     padding: 15px 23px;
+  }
+
+  #projects {
+    min-height: 600px;
   }
 }
