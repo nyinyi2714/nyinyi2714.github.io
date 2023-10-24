@@ -139,6 +139,8 @@ img {
   cursor: default;
   font-family: "Space Mono", monospace;
   letter-spacing: .1rem;
+  /* for loading animation */
+  opacity: 0;
 }
 
 .side_content::after {
@@ -214,6 +216,8 @@ nav.box_shadow {
 .logo {
   position: relative;
   color: var(--green);
+  /* for loading animation */
+  opacity: 0;
 }
 
 .name {
@@ -221,6 +225,8 @@ nav.box_shadow {
   top: 29%;
   left: 28%;
   font-weight: bold;
+  /* for loading animation */
+  opacity: 0;
 }
 
 .logo_wrapper {
@@ -238,6 +244,11 @@ nav.box_shadow {
   justify-content: space-between;
   gap: 30px;
   margin-right: 50px;
+}
+
+.desktop_nav > * {
+  /* for loading animation */
+  opacity: 0;
 }
 
 .desktop_nav_item {
@@ -282,6 +293,8 @@ nav.box_shadow {
   align-items: flex-end;
   gap: .5rem;
   position: relative;
+  /* for loading animation */
+  opacity: 0;
 }
 
 .burger_menu > div {
@@ -339,6 +352,11 @@ main {
   flex-direction: column;
   justify-content: center;
   text-align: left;
+}
+
+.hero > * {
+  /* for loading animation */
+  opacity: 0;
 }
 
 .hero span {
