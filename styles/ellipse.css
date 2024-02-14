@@ -1,0 +1,97 @@
+.ellipses-container {
+  width: min(30vw, 350px);
+  height: min(30vw, 350px);
+  border-radius: 50%;
+  position: relative;
+  margin: 50px auto;
+  background-color: transparent;
+  /* for loading animation */
+  opacity: 0; 
+}
+
+.ellipses__outer {
+  width: 100%;
+  height: 100%;
+  border: 3px solid;
+  border-color:  var(--lightest-slate) #0331af;
+  border-radius: 50%;
+  animation: ellipsesRotate 3s cubic-bezier(.89,.11,.49,.96) infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.ellipses__orbit {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: ellipsesRotate 4s cubic-bezier(.76,.02,.62,.96) infinite reverse;
+  position: absolute;
+  z-index: 6;
+}
+
+.object {
+  top: -13px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 2px solid;
+  border-radius: 50%;
+  border-color: #fff;
+  position: absolute;
+  z-index: 6;
+}
+
+.object__center {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+}
+
+.ellipses__inner {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border: 0 solid lightgrey;
+  border-radius: 50%;
+  
+  color: var(--lightest-slate);
+  font-family: monospace;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+  text-align: center;
+  padding-left: 26px;
+}
+
+@keyframes ellipsesRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* hide the ellipses */
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .ellipses-container {
+    display: none;
+  }
+}

@@ -5,8 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nyi Nyi Moe Htet</title>
+  <title>Nyi Nyi's Portfolio</title>
+
+  <link rel="stylesheet" href="./styles/ellipse.css">
+  <link rel="stylesheet" href="./styles/side-content.css">
+  <link rel="stylesheet" href="./styles/navbar.css">
+  <link rel="stylesheet" href="./styles/sections.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="stylesheet" href="./styles/general.css">
   <link rel="stylesheet" href="style.css">
+
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
@@ -61,25 +69,43 @@
   </nav>
   <main>
     <section class="section hero" id="hero">
-      <span>Hi, my name is </span>
+      <div class="hero_content">
+        <span>Hi, my name is </span>
       <h1 class="hero_name">Nyi Nyi Moe Htet</h1>
-      <h2 class="hero_position">Frontend Developer</h2>
-      <span class="btn-wrapper">
-        <a 
-        href=https://github.com/nyinyi2714/nyinyi2714.github.io/blob/main/NyiNyiMoe_Htet_Resume.pdf 
-        target="_blank"
-        class="btn"
-        >
-          Resume
-        </a>
-      </span>
+      <h2 class="hero_position">I'm a Full-Stack Web Developer.</h2>
+      <div class="button-container">
+        <span class="btn-wrapper">
+          <a href=https://github.com/nyinyi2714/nyinyi2714.github.io/blob/main/NyiNyiMoe_Htet_Resume.pdf target="_blank"
+            class="btn">
+            Resume
+          </a>
+        </span>
+        <span class="btn-wrapper">
+          <a href=https://www.linkedin.com/in/nyi-nyi-moe-htet-806b41284 target="_blank"
+            class="btn">
+            LinkedIn Profile
+          </a>
+        </span>
+      </div>
+      
+    </div>
+
+      <div class="ellipses-container">
+        <div class="ellipses__outer"></div>
+        <div class="ellipses__inner">Hello</div>
+        <div class="ellipses__orbit">
+          <div class="object">
+            <div class="object__center"></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section about slide-in" id="about">
       <h2 class="sec_heading">About Me</h2>
       <div class="profile_container">
         <div class="profile_img">
-          <img src="/profile.jpg" alt="profile photo" class="img">
+          <img src="images/profile.jpg" alt="profile photo" class="img">
         </div>
         <div class="profile">
           <p>
@@ -94,14 +120,47 @@
             that allows students to enroll in and manage
             CSUN Senior Design Projects.
           </p>
+          <div class="skills-container">
+            <h4>Skills</h4>
+            <ul class="skills">
+              <li>React</li>
+              <li>Typescript</li>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>RestAPI</li>
+              <li>MongoDB</li>
+              <li>GitHub</li>
+              <li>Jira</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Java</li>
+            </ul>
+          </div>
         </div>
+
       </div>
     </section>
 
     <section class="section experience slide-in" id="experience">
       <h2 class="sec_heading">Experience</h2>
-      <div class="experience_item">
-        <h4>MAY 2023 — PRESENT</h4>
+      <div class="experience_item slide-in">
+        <h4>OCT 2023 — DEC 2023</h4>
+        <div class="experience__content">
+          <h3>Instructional Student Assistant · California State University, Northridge</h3>
+          <p class="description">
+            I provided tutoring assistance to computer science students, 
+            offering support in understanding Java programming. Additionally, 
+            I created example programs to help clarify concepts related to data 
+            structures and the time complexity of algorithms.
+          </p>
+          <div class="tech_container">
+            <div class="tech">Java</div>
+            <div class="tech">Object-Oriented Programming</div>
+          </div>
+        </div>
+      </div>
+      <div class="experience_item slide-in">
+        <h4>MAY 2023 — AUG 2023</h4>
         <div class="experience__content">
           <h3>Frontend Developer · LunaTech</h3>
           <p class="description">
@@ -112,39 +171,78 @@
             unit tests for React components using React
             Testing Library.
           </p>
-          <div class="skills-container">
-            <div class="skill">React</div>
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">Github</div>
+          <div class="tech_container">
+            <div class="tech">React</div>
+            <div class="tech">HTML</div>
+            <div class="tech">CSS</div>
+            <div class="tech">Jira</div>
+            <div class="tech">Github</div>
           </div>
         </div>
       </div>
+
     </section>
 
     <section class="section projects slide-in" id="projects">
       <h2 class="sec_heading slide-in">Projects</h2>
       <div class="projects_container slide-in">
         <div class="project_item item1">
-          <h3>Hotel Reservation App</h3>
-          <h4>Team Leader / Frontend Developer</h4>
-          <p class="description">
-            I've overseen the development of a web app that
-            allows users to view, book, edit, and delete hotel
-            room reservations, while managers can generate reservation
-            statistics reports. We also created user manuals, technical
-            documentation, and written comprehensive tests
-            for functionality assurance.
-          </p>
-          <ul class="skills-container">
-            <li class="skill">React</li>
-            <li class="skill">HTML</li>
-            <li class="skill">CSS</li>
-            <li class="skill">Flask</li>
-            <li class="skill">MongoDB</li>
-            <li class="skill">Github</li>
-          </ul>
+          <div class="project_card">
+            <div class="front" id="hotel-del-luna">
+              <h4>Hotel Reservation App</h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                <path d="M11.975 22H12c3.859 0 7-3.14 7-7V9c0-3.841-3.127-6.974-6.981-7h-.06C8.119 2.022 5 5.157 5 9v6c0 3.86 3.129 7 6.975 7zM7 9a5.007 5.007 0 0 1 4.985-5C14.75 4.006 17 6.249 17 9v6c0 2.757-2.243 5-5 5h-.025C9.186 20 7 17.804 7 15V9z"></path>
+                <path d="M11 6h2v6h-2z"></path>
+              </svg>
+            </div>
+            <div class="back">
+              <h4>Hotel Reservation App</h4>
+              <p class="description">
+                A web app for users to view, book, edit, and delete hotel
+                room reservations.
+              </p>
+              <ul class="tech_container">
+                <li class="tech">React</li>
+                <li class="tech">Node.js</li>
+                <li class="tech">Express.js</li>
+                <li class="tech">MongoDB</li>
+              </ul>
+              <a href="/projects/hotel-del-luna.html">Learn More <i class="fa-regular fa-circle-right"></i></a>
+            </div>
+          </div>
         </div>
+        <div class="project_item item1">
+          <div class="project_card">
+            <div class="front" id="speakmentor">
+              <h4>SpeakMentor</h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                <path d="M11.975 22H12c3.859 0 7-3.14 7-7V9c0-3.841-3.127-6.974-6.981-7h-.06C8.119 2.022 5 5.157 5 9v6c0 3.86 3.129 7 6.975 7zM7 9a5.007 5.007 0 0 1 4.985-5C14.75 4.006 17 6.249 17 9v6c0 2.757-2.243 5-5 5h-.025C9.186 20 7 17.804 7 15V9z"></path>
+                <path d="M11 6h2v6h-2z"></path>
+                hover
+              </svg>
+            </div>
+            <div class="back">
+              <h4>SpeakMentor</h4>
+              <p class="description">
+                Led a team of four in the creation of a web app that enable users 
+                to record their pronunciation of
+                English words, and get a feedback on each
+                syllable if pronounced incorrectly.
+              </p>
+              <ul class="tech_container">
+                <li class="tech">React</li>
+                <li class="tech">Django</li>
+                <li class="tech">Azure Speech Analysis</li>
+                <li class="tech">Google TTS</li>
+                <li class="tech">Speech Recognization</li>
+              </ul>
+              <a href="/projects/speakmentor.html">
+                Learn More <i class="fa-regular fa-circle-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </section>
@@ -154,22 +252,28 @@
       <a href=""><i class="fa-brands fa-facebook"></i></a>
       <a href=""><i class="fa-brands fa-twitter"></i></a>
       <a href=""><i class="fa-brands fa-instagram"></i></a>
-      <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.linkedin.com/in/nyi-nyi-moe-htet-806b41284" target="_blank">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
       <a href=""><i class="fa-brands fa-codepen"></i></a>
     </div>
     <p>Created by Nyi Nyi Moe Htet</p>
     <p>Email: nyinyi2714@gmail.com</p>
   </footer>
+
   <div class="side_content side_content_left social">
     <a href="#"><i class="fa-brands fa-facebook"></i></a>
     <a href="#"><i class="fa-brands fa-twitter"></i></a>
     <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://www.linkedin.com/in/nyi-nyi-moe-htet-806b41284" target="_blank">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
     <a href="#"><i class="fa-brands fa-codepen"></i></a>
   </div>
   <div class="side_content side_content_right">
     nyinyi2714@gmail.com
   </div>
+  
 </body>
 
 </html>

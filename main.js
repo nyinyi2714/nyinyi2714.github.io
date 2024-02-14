@@ -50,11 +50,12 @@ slideInObserver = new IntersectionObserver((entries, observer) => {
 slideIns.forEach(item => slideInObserver.observe(item))
 
 //Animating the page loading
-const timeline = gsap.timeline({defaults: {duration: .4} })
+const timeline = gsap.timeline({defaults: {duration: .5} })
 timeline
     .fromTo(".logo", {opacity: 0, y: "-100%"}, {opacity: 1, y: 0, ease: "back.out(3)", duration: .6})
     .to(".name", {textShadow: "0 0 10px", duration: 1})
-    .fromTo(".hero > *", {opacity: 0, y: "40%"}, {opacity: 1, y: 0, stagger: .2}, "<")
+    .fromTo(".hero_content > *", {opacity: 0, y: "40%"}, {opacity: 1, y: 0, stagger: .2}, "<")
+    .fromTo(".ellipses-container", {opacity: 0, y: "40%"}, {opacity: 1, y: 0})
     .fromTo(".desktop_nav > *", {opacity: 0, y: "-100%"}, {opacity: 1, y: 0, stagger: .1}, "nav-=1")
     .fromTo(".burger_menu", {opacity: 0, y: "-100%"}, {opacity: 1, y: 0}, "nav-=1")
     .fromTo(".side_content_left", {opacity: 0}, {opacity: 1}, "side")

@@ -1,0 +1,64 @@
+/* Side Content */
+
+.side_content {
+  font-size: 12px;
+  font-weight: 400;
+  position: fixed;
+  top: 40vh;
+  writing-mode: vertical-lr;
+  cursor: default;
+  font-family: "Space Mono", monospace;
+  letter-spacing: .1rem;
+  /* for loading animation */
+  opacity: 0;
+}
+
+.side_content_left::after,
+.side_content_right::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  width: 1px;
+  height: 1000px;
+  background-color: var(--slate);
+}
+
+.side_content_left::after {
+  width: 2px;
+}
+
+.side_content_left {
+  top: calc(40vh - 12.5px);
+  left: 50px;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.social {
+  margin: 1rem 0;
+}
+
+.social i {
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: 200ms;
+}
+
+.social a {
+  margin: .4rem .85rem;
+}
+
+.side_content_right {
+  right: 50px;
+  transition: 200ms;
+}
+
+.side_content_right:hover, .side_content_left i:hover {
+  color: var(--green);
+}
+
+.side_content_left i:hover {
+  transform: translateY(-10%);
+}

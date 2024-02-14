@@ -1,0 +1,138 @@
+nav {
+  height: 10vh;
+  padding: 0 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav > a {
+  left: clamp(1rem, 5vw, 2rem);
+  position: absolute;
+  font-size: clamp(0.8rem, 3vw, 1rem);
+}
+
+nav > a > svg {
+  fill: var(--green);
+}
+
+nav > h1 {
+  color: var(--lightest-slate);
+  font-size: clamp(1.2rem, 6vw, 2rem);
+}
+
+main {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 clamp(1rem, 5vw, 2rem) 2rem;
+}
+
+.carousel_wrapper {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.carousel_wrapper#speakmentor {
+  width: min(100%, 632px);
+}
+
+.carousel_wrapper#hotel-del-luna {
+  width: min(100%, 900px);
+}
+
+.carousel_wrapper svg {
+  fill: var(--green);
+  position: relative;
+  top: 2px;
+}
+
+.carousel_wrapper > button {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: none;
+  background-color: var(--light-navy);
+  padding: 0.3rem;
+  border-radius: 5px;
+  opacity: 0.2;
+  transition: opacity 200ms ease-in-out;
+}
+
+.carousel_wrapper > button:hover {
+  opacity: 1;
+}
+
+.carousel_wrapper > button:disabled {
+  opacity: 0.2;
+  cursor: default !important;
+}
+
+button#next {
+  left: auto;
+  right: 1rem;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 500ms ease-in-out;
+}
+
+.carousel > img {
+  max-width: 100%;
+}
+
+.content {
+  padding-top: 2rem;
+}
+
+.content a {
+  color: var(--green);
+}
+
+.description {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--lightest-slate);
+}
+
+@media (max-width: 450px) {
+  .description {
+    padding: 20px 0 0;
+  }
+}
+
+.description span {
+  position: absolute;
+  left: -34px;
+  display: inline-block;
+  width: 25px;
+  height: 100%;
+}
+
+h2 {
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #f1f3fc;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  margin-left: 35px;
+  margin-bottom: 10px;
+}

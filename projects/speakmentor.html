@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpeakMentor</title>
+  <link rel="stylesheet" href="/styles/general.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+
+</head>
+
+<body>
+  <nav>
+    <a href="/index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
+        <path d="m8.121 12 4.94-4.939-2.122-2.122L3.879 12l7.06 7.061 2.122-2.122z"></path>
+        <path d="M17.939 4.939 10.879 12l7.06 7.061 2.122-2.122L15.121 12l4.94-4.939z"></path>
+      </svg>
+    </a>
+    <h1>Speak Mentor</h1>
+  </nav>
+  <main>
+
+    <div class="carousel_wrapper" id="speakmentor">
+      <button data-action="prev" id="prev">
+        <svg data-action="prev" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path data-action="prev"
+            d="m4.431 12.822 13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645z"></path>
+        </svg>
+      </button>
+      <button data-action="next" id="next">
+        <svg data-action="next" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path data-action="next"
+            d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z">
+          </path>
+        </svg>
+      </button>
+      <div class="carousel" id="carousel">
+        <img src="/images/speakmentor/speakmentor-ss-1.png" alt="speak mentor app screenshot-1">
+        <img src="/images/speakmentor/speakmentor-ss-2.png" alt="speak mentor app screenshot-2">
+        <img src="/images/speakmentor/speakmentor-ss-3.png" alt="speak mentor app screenshot-3">
+        <img src="/images/speakmentor/speakmentor-ss-4.png" alt="speak mentor app screenshot-4">
+      </div>
+    </div>
+
+    <section class="content">
+      <article class="description">
+        <h2>Deployment</h2>
+        <ul>
+          <li><span>&#x1F310;</span>
+            The frontend is hosted on AWS Amplify, while the backend is deployed on AWS EC2 Instance.
+          </li>
+          <li><span>&#x1F6E0;</span>
+            Status: Website is under maintence. Switching to different speech analysis API due to high cost.
+          </li>
+        </ul>
+        <h2>Project Overview</h2>
+        <ul>
+          <li><span>&#x1F680;</span>Objective: Develop a web app to help users improve their English pronunciation.</li>
+          <li>
+            <span>&#x1F3A4;</span> Functionality: Allows users to record their pronunciation of English words, providing feedback
+            on each syllable if pronounced incorrectly.
+          </li>
+        </ul>
+        <h2>Role</h2>
+        <ul>
+          <li><span>&#x1F465;</span> Led a team of four individuals throughout the entire development lifecycle.</li>
+          <li><span>&#x1F4BB;</span> Specialized as a frontend developer, focusing on crafting interactive user interfaces.</li>
+          <li><span>&#x23F1;</span> Employed Jira  for project management, ensuring efficient planning and tracking of tasks.</li>
+        </ul>        
+        <h2>Technology Stack</h2>
+        <ul>
+          <li><span>&#x1F4BB;</span> Developed the frontend using React, hosted on AWS Amplify. Implemented best coding practices for scalability and maintainability.</li>
+          <li><span>&#x1F4F1;</span> Implemented responsive design for various devices, from mobile to desktop screens.</li>
+          <li><span>&#x1F40D;</span> Utilized Django for backend development, hosted on AWS EC2 instance.</li>
+        </ul>        
+        <h2>Integration of APIs</h2>
+        <ul>
+          <li><span>&#x1F5A8;</span> Leveraged the Google Text to Speech API for seamless text-to-speech functionality.</li>
+          <li><span>&#x1F399;</span> Implemented React speech recognition to facilitate voice input.</li>
+          <li><span>&#x1F30D;</span> Employed Microsoft Azure Speech Analysis to conduct in-depth evaluations of pronunciation.</li>
+        </ul>        
+        <h2>Enhancements Planned</h2>
+        <ul>
+          <li><span>&#x1F4A1;</span> Introduction of a new feature enabling users to practice pronunciation for phrases and sentences.</li>
+          <li><span>&#x1F4CA;</span> Development of an assessment page designed to evaluate users' English pronunciation proficiency.</li>
+          <li><span>&#x1F916;</span> Integration of an AI chatbot to facilitate real-life scenario-based language practice.</li>
+        </ul>
+      </article>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

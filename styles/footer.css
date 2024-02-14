@@ -1,0 +1,39 @@
+/* Footer */
+footer {
+  width: fit-content;
+  margin: 2rem auto;
+}
+
+footer:hover p {
+  cursor: pointer;
+  color: var(--green);
+}
+
+footer p {
+  font-size: .9rem;
+  font-family: "Space Mono", monospace;
+  transition: 200ms;
+}
+
+.mobile_footer {
+  display: none;
+
+}
+
+.sec_heading {
+  font-size: 2rem;
+  width: fit-content;
+  margin: 2rem 0;
+  position: relative;
+  color: var(--lightest-slate);
+} 
+
+.sec_heading::after {
+  content: "";
+  position: absolute;
+  width: 30vw;
+  height: 2px;
+  background-color: var(--lightest-navy);
+  top: 50%;
+  left: calc(100% + 30px);
+}

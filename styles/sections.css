@@ -1,0 +1,280 @@
+.about, .experience, .projects, .contact {
+  padding-top: 115px;
+}
+
+.hero {
+  min-height: calc(100vh - 80px);
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  column-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.hero_content > * {
+  /* for loading animation */
+  opacity: 0;
+}
+
+.hero span {
+  color: var(--green);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.hero_name, .hero_position  {
+  color: var(--lightest-slate);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.hero_name {
+  font-size: clamp(25px, 7.5vw , 70px);
+}
+
+.hero_position {
+  font-size: clamp(15px, 4.5vw , 30px);
+  color: var(--slate);
+  margin: 10px 0 30px;
+}
+
+/* About-Me Section Styles */
+.profile_container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: .5rem;
+  padding-top: 2rem;
+
+}
+
+.profile_img {
+  position: relative;
+  display: block;
+  height: max(200px, 20vw);
+  border-radius: 5px;
+  justify-self: center;
+  box-shadow: 10px 10px 5px var(--navy-shadow);
+}
+
+.profile {
+  width: 80%;
+  margin: auto;
+}
+
+.profile h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1.5rem 0;
+}
+
+.profile p {
+  margin: 0 auto;
+}
+
+.profile p:nth-child(2) {
+  margin: 20px auto;
+}
+
+.skills-container {
+  margin-top: 1.5rem;
+  margin: 20px auto;
+}
+
+.skills-container > h4 {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.skills {
+  list-style: disc inside;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.skills > li {
+  cursor: default;
+  transition: 200ms;
+}
+
+.skills > li:hover {
+  color: var(--green)
+}
+
+/* Experience Section Styles */
+.experience_item {
+  max-width: 800px;
+}
+
+.experience_item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.experience_item h4 {
+  font-size: 0.9rem;
+  margin-bottom: 7px;
+}
+
+/* Project Section Styles */
+.projects_container {
+  max-width: 800px;
+  margin: auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.project_item {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project_item h4 {
+  color: var(--lightest-slate);
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.description {
+  background-color: transparent;
+}
+
+.project_item:hover > .project_card {
+  transform: rotateY(180deg);
+}
+
+.project_card {
+  position: relative;
+  transition: 1000ms;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+}
+
+.project_card .front, 
+.project_card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.project_card .front {
+  display: flex;
+  align-items: flex-end;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+}
+
+.project_card #speakmentor {
+  background-image: url("/images/speakmentor/speakmentor-cover.png");
+  background-position: left;
+}
+
+.project_card #hotel-del-luna {
+  background-image: url("/images/hotel-del-luna/hotel-del-luna-cover.png");
+  background-position: top;
+}
+
+.project_card .front svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--green);
+  background-color: var(--dark-slate);
+  padding: .5rem;
+  border-radius: 10px;
+  opacity: 0.5;
+  animation: hopping 2000ms ease-in-out infinite;
+}
+
+@keyframes hopping {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 48%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+.project_item .front h4 {
+  font-size: 1.1rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.project_card .back {
+  position: relative;
+  transform: rotateY(180deg);
+  color: var(--lightest-slate);
+  background-color: var(--light-navy);
+  padding: 1.5rem;
+}
+
+.project_card .back h4 {
+  padding: .5rem 0 1rem;
+}
+
+.project_card .back a {
+  border: none;
+  background: transparent;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--green);
+}
+
+.project_card .back i {
+  font-size: 1.5rem;
+  color: var(--green);
+}
+
+.tech_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  font-size: .9rem;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.tech {
+  cursor: default;
+  width: max-content;
+  color: var(--green);
+  background-color: rgba(43, 108, 94, 0.25);
+  border: 1px solid var(--green);
+  padding: .3rem .5rem;
+  border-radius: 20px;
+  text-align: center;
+  transition: 200ms;
+}
+
+.tech:hover {
+  background-color: rgba(43, 108, 94, 0.7);
+}

@@ -1,0 +1,144 @@
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 80px;
+  padding: 0 40px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
+  background-color: inherit;
+  opacity: .98;
+  z-index: 3;
+
+  transition: box-shadow 400ms;
+}
+
+nav.box_shadow {
+  box-shadow: 0 2px 10px var(--navy-shadow);
+}
+
+.logo {
+  position: relative;
+  color: var(--green);
+  /* for loading animation */
+  opacity: 0;
+}
+
+.name {
+  position: absolute;
+  top: 29%;
+  left: 28%;
+  font-weight: bold;
+  /* for loading animation */
+}
+
+.logo_wrapper {
+  overflow: hidden;
+}
+
+.logo_path {
+  transform: translate(1.5px, 4.2px);
+  stroke-width: 3px;
+  stroke: var(--green);
+}
+
+.desktop_nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-right: 50px;
+}
+
+.desktop_nav > * {
+  /* for loading animation */
+  opacity: 0;
+}
+
+.desktop_nav_item {
+  display: block;
+  color: var(--lightest-slate);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.desktop_nav_item::after {
+  content: "";
+  background-color: var(--green);
+  height: 2px;
+  width: 0;
+  display: block;
+  margin-top: 3px;
+  transform: translateX(-10px);
+  transition: width 200ms ease-out;
+  position: relative;
+  left: 10px;
+}
+
+.desktop_nav_item.active::after {
+  width: calc(100%);
+}
+
+.mobile_nav {
+  display: none;
+}
+
+.mobile_nav_item {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.burger_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .5rem;
+  position: relative;
+  /* for loading animation */
+  opacity: 0;
+}
+
+.burger_menu > div {
+  width: 40px;
+  height: 2px;
+  background-color: var(--green);
+}
+
+.burger_menu > div:nth-of-type(2) {
+  width: 30px;
+}
+
+.burger_menu > div:nth-of-type(3) {
+  width: 20px;
+}
+
+.extended_menu {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  color: var(--lightest-slate);
+  background: var(--light-navy); 
+  
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 3rem 0;
+
+  width: min(75vw, 500px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translateX(100%);
+  transition: 300ms ease-in-out;
+}

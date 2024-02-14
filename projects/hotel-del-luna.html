@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Del Luna</title>
+  <link rel="stylesheet" href="/styles/general.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+
+</head>
+
+<body>
+  <nav>
+    <a href="/index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
+        <path d="m8.121 12 4.94-4.939-2.122-2.122L3.879 12l7.06 7.061 2.122-2.122z"></path>
+        <path d="M17.939 4.939 10.879 12l7.06 7.061 2.122-2.122L15.121 12l4.94-4.939z"></path>
+      </svg>
+    </a>
+    <h1>Hotel Del Luna</h1>
+  </nav>
+  <main>
+
+    <div class="carousel_wrapper" id="hotel-del-luna">
+      <button data-action="prev" id="prev">
+        <svg data-action="prev" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path data-action="prev"
+            d="m4.431 12.822 13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645z"></path>
+        </svg>
+      </button>
+      <button data-action="next" id="next">
+        <svg data-action="next" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path data-action="next"
+            d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z">
+          </path>
+        </svg>
+      </button>
+      <div class="carousel" id="carousel">
+        <img src="/images/hotel-del-luna/hotel-del-luna-ss-1.png" alt="hotel del luna app screenshot-1">
+        <img src="/images/hotel-del-luna/hotel-del-luna-ss-2.png" alt="hotel del luna app screenshot-2">
+        <img src="/images/hotel-del-luna/hotel-del-luna-ss-3.png" alt="hotel del luna app screenshot-3">
+        <img src="/images/hotel-del-luna/hotel-del-luna-ss-4.png" alt="hotel del luna app screenshot-4">
+        <img src="/images/hotel-del-luna/hotel-del-luna-ss-5.png" alt="hotel del luna app screenshot-5">
+        <img src="/images/hotel-del-luna/hotel-del-luna-ss-6.png" alt="hotel del luna app screenshot-6">
+        <img src="/images/hotel-del-luna/hotel-del-luna-ss-7.png" alt="hotel del luna app screenshot-7">
+
+      </div>
+    </div>
+
+    <section class="content">
+      <article class="description">
+        <h2>Deployment</h2>
+        <ul>
+          <li><span>&#x1F310;</span>
+            The frontend is hosted on AWS Amplify, while the backend is deployed on Render.
+          </li>
+          <li><span>&#x1F7E2;</span>
+            Status: Website is live. 
+            <a href="https://main.d3h5714ovsmoy5.amplifyapp.com" target="_blank">Click Here</a> 
+             to check it out!
+          </li>
+        </ul>
+        <h2>Project Overview</h2>
+        <ul>
+          <li><span>&#x1F680;</span>
+            Objective: Develop an online hotel reservation website for users to 
+            view rooms and book, edit and delete reservations.
+          </li>
+        </ul>
+        <h2>Security</h2>
+        <ul>
+          <li><span>&#x1F465;</span> Used JSON Web token (JWT) for user authentication.</li>
+          <li><span>&#x1F465;</span> 
+            Invoked tokens are stored in database with TTL (Time-to-Live) feature,
+            configured to automatically delete them after 24 hours.
+          </li>
+          <li><span>&#x1F4BB;</span> 
+            Users' passwords are hashed using bcrypt library before saving in database.
+          </li>
+        </ul>        
+        <h2>Technology Stack</h2>
+        <ul>
+          <li><span>&#x1F4BB;</span> 
+            Developed the frontend using React.js, implementing best coding 
+            practices for scalability and maintainability.
+          </li>
+          <li><span>&#x1F4F1;</span> 
+            Implemented responsive design for various devices, from mobile to desktop screens.
+          </li>
+          <li><span>&#x1F310;</span> 
+            Utilized Node.js for backend development with mongoDB as Database.
+          </li>
+        </ul>               
+        <h2>Enhancements Planned</h2>
+        <ul>
+          <li><span>&#x1F4CA;</span> 
+            Admin portal for hotel managers to generate reports and access statistical
+            insights related to reservations.
+          </li>
+        </ul>
+      </article>
+    </section>
+
+  </main>
+
+</body>
+
+</html>
