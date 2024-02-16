@@ -194,27 +194,13 @@
 
 .project_card .front svg {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: var(--green);
-  background-color: var(--dark-slate);
+  bottom: 0;
+  right: 0;
+  transform: translateX(-20%);
+  fill: var(--lightest-slate);
   padding: .5rem;
   border-radius: 10px;
   opacity: 0.5;
-  animation: hopping 2000ms ease-in-out infinite;
-}
-
-@keyframes hopping {
-  0% {
-    top: 50%;
-  }
-  50% {
-    top: 48%;
-  }
-  100% {
-    top: 50%;
-  }
 }
 
 .project_item .front h4 {
