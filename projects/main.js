@@ -37,3 +37,38 @@ function navigateCarousel(e) {
 }
 
 navigationBtns.forEach(btn => btn.addEventListener('click', navigateCarousel));
+
+const demoVideo = document.getElementById("demo-video");
+const videoPlayBtn = document.getElementById('video-play-btn');
+const playIcon = document.getElementById("play-icon");
+
+const playSvgPath = "M7 6v12l10-6z";
+const pauseSvgPath = "M8 7h3v10H8zm5 0h3v10h-3z"
+let timerRef;
+
+const hidePlayBtn = () => {
+  videoPlayBtn.classList.remove("full-opacity");
+};
+
+const displayPlayBtn = () => {
+  videoPlayBtn.classList.add("full-opacity");
+  if(timerRef) clearTimeout(timerRef);
+  timerRef = setTimeout(hidePlayBtn, 1500); // hide play button after 1.5 sec of displaying
+};
+
+demoVideo?.addEventListener('mouseenter', displayPlayBtn);
+demoVideo?.addEventListener('mousemove', displayPlayBtn);
+demoVideo?.addEventListener('ended', () => {
+  videoPlayBtn.classList.add("full-opacity");
+  playIcon.setAttribute('d', playSvgPath);
+});
+
+videoPlayBtn?.addEventListener('click', () => {
+  if (demoVideo.paused) {
+    demoVideo.play();
+    playIcon.setAttribute('d', pauseSvgPath);
+  } else {
+    demoVideo.pause();
+    playIcon.setAttribute('d', playSvgPath);
+  }
+});

@@ -137,7 +137,48 @@ li {
   margin-bottom: 10px;
 }
 
-.demo-gif {
-  width: min(500px, 100%);
+.video-wrapper {
+  position: relative;
+  max-width: 500px;
+}
+
+.demo-video {
+  width: 100%;
   border-radius: 10px;
 }
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--lightest-navy);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: none;
+
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: 500ms ease-in-out;
+}
+
+.video-play-btn:hover {
+  opacity: 1;
+}
+
+.full-opacity {
+  opacity: 1;
+}
+
+.video-play-btn * {
+  fill: var(--green);
+}
+
+path[d="M7 6v12l10-6z"] {
+  transform: translateX(1px);
+}
+

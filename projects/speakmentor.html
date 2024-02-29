@@ -7,8 +7,9 @@
   <title>SpeakMentor</title>
   <link rel="stylesheet" href="/styles/general.css">
   <link rel="stylesheet" href="style.css">
+  <!-- Include Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="main.js" defer></script>
-
 </head>
 
 <body>
@@ -69,7 +70,12 @@
           </li>
         </ul>     
         <h2>Short Demo</h2>
-        <img class="demo-gif" src="/images/speakmentor/demo.gif" alt="speak mentor app gif">
+        <div class="video-wrapper">
+          <video class="demo-video" id="demo-video" src="/videos/demo.mp4"></video>
+          <button class="video-play-btn" id="video-play-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path id="play-icon" d="M7 6v12l10-6z"></path></svg>
+          </button>
+        </div>
         <h2>Technology Stack</h2>
         <ul>
           <li><span>&#x1F4BB;</span> Developed the frontend using React, hosted on AWS Amplify. Implemented best coding practices for scalability and maintainability.</li>
