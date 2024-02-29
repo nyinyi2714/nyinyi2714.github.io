@@ -63,7 +63,7 @@ nav.box_shadow {
 .desktop_nav_item {
   display: block;
   color: var(--lightest-slate);
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1px;
   text-align: center;
 }
