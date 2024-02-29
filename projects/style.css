@@ -37,7 +37,7 @@ main {
 }
 
 .carousel_wrapper#speakmentor {
-  width: min(100%, 632px);
+  width: min(100%, 270px);
 }
 
 .carousel_wrapper#hotel-del-luna {
@@ -84,7 +84,7 @@ button#next {
   transition: transform 500ms ease-in-out;
 }
 
-.carousel > img {
+.carousel > * {
   max-width: 100%;
 }
 
@@ -135,4 +135,9 @@ li {
   position: relative;
   margin-left: 35px;
   margin-bottom: 10px;
+}
+
+.demo-gif {
+  width: min(500px, 100%);
+  border-radius: 10px;
 }
